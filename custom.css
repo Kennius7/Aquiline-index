@@ -1,0 +1,129 @@
+/* Custom animations and effects for Aquiline website */
+
+/* Custom bounce animation with delays */
+@keyframes custom-bounce {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    50% { 
+        transform: translateY(-10px) rotate(180deg); 
+    }
+}
+
+/* Mobile navigation toggle */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Progress bar animation on scroll */
+.progress-animate {
+    animation: progressFill 2s ease-out forwards;
+}
+
+@keyframes progressFill {
+    from {
+        width: 0%;
+    }
+    to {
+        width: var(--progress-width);
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom hover effects */
+.hover-lift:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+/* Canvas styling */
+canvas {
+    border-radius: 8px;
+}
+
+/* Custom gradients */
+.gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-security {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 50;
+    }
+}
+
+/* Chart container improvements */
+.chart-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation delays for floating icons */
+.animate-bounce-delay-1 {
+    animation: bounce 1s infinite;
+    animation-delay: 0.1s;
+}
+
+.animate-bounce-delay-2 {
+    animation: bounce 1s infinite;
+    animation-delay: 0.2s;
+}
+
+.animate-bounce-delay-3 {
+    animation: bounce 1s infinite;
+    animation-delay: 0.3s;
+}
+
+/* Custom pulse effect for shield */
+.pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+    from { 
+        text-shadow: 0 0 20px currentColor; 
+    }
+    to { 
+        text-shadow: 0 0 30px currentColor, 0 0 40px currentColor; 
+    }
+}
+
+/* Ensure proper font rendering */
+.font-georgia {
+    font-family: Georgia, serif;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquiline Technology - Your Trusted Partner in Smart Security Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                        'georgia': ['Georgia', 'serif'],
+                    },
+                    colors: {
+                        'aquiline-red': '#c55555',
+                        'aquiline-blue': '#4a90e2',
+                        'text-primary': '#333333',
+                        'text-secondary': '#666666',
+                        'text-light': '#999999',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body class="font-roboto font-normal text-text-primary bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="py-4">
+            <div class="max-w-6xl mx-auto px-5 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img 
+                        src="/logo.png" 
+                        alt="Aquiline Technology" 
+                        class="md:w-[180px] md:h-[36px] w-[120px] h-[24px]"
+                    >
+                </div>
+                <ul class="hidden md:flex list-none gap-8 m-0">
+                    <li>
+                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">
+                            Product <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Company</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Contact us</a>
+                    </li>
+                </ul>
+                <button 
+                    class="bg-gray-800 text-white border-none md:py-2 md:px-6 py-1 px-4 rounded-lg font-medium 
+                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 flex 
+                    items-center gap-2 md:text-[16px] text-[12px]"
+                >
+                    Book demo <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="md:hidden flex flex-col cursor-pointer">
+                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
+                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
+                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight font-georgia">
+                        Your <span class="text-aquiline-red">Trusted </span><br>
+                        Partner In Smart,<br>
+                        Comprehensive<br>
+                        <span class="text-aquiline-red">Security</span> Solutions
+                    </h1>
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        Protecting your people, assets, and operations with tailored strategies, cutting-edge technology, and unwavering expertise
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-aquiline-red text-white px-8 py-3 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2">
+                            Explore Solutions <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="border-2 border-gray-300 text-text-primary px-8 py-3 rounded-lg font-medium transition-all hover:border-aquiline-red hover:text-aquiline-red hover:-translate-y-1 flex items-center justify-center gap-2">
+                            Speak with us <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-[520px] h-[480px] rounded-2xl flex items-center justify-center 
+                        overflow-hidden">
+                        <img 
+                            src="/header1.png" 
+                            alt="Hero Image" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrated Security Solutions -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
+                    Integrated Security Solutions - All in one platform
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Highlights innovation and modern solutions—great for showcasing products 
+                    like automation and SIMP.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-6 max-w-5xl mx-auto">
+                <div 
+                    class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 font-georgia">Sentinel One</h3>
+                    <p class="text-text-secondary md:mb-6 mb-3 leading-relaxed">
+                        Advanced monitoring and threat detection for comprehensive security management.
+                    </p>
+                    <div 
+                        class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 flex 
+                        items-center justify-center overflow-hidden shadow-lg">
+                        <img 
+                            src="/sentinel1.png" 
+                            alt="Sentinel One" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <a href="#" class="text-aquiline-red font-medium hover:text-red-600 transition-colors flex items-center gap-2">
+                        Explore Sentinel One <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div 
+                    class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 font-georgia">Traxovia</h3>
+                    <p class="text-text-secondary md:mb-6 mb-3 leading-relaxed">
+                        Real-time tracking and analytics for optimal vehicle deployment and maintenance.
+                    </p>
+                    <div 
+                        class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 
+                        flex items-center justify-center overflow-hidden shadow-lg">
+                        <img 
+                            src="/traxovia.png" 
+                            alt="Traxovia" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <a href="#" class="text-aquiline-red font-medium hover:text-red-600 transition-colors flex items-center gap-2">
+                        Explore Traxovia <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div 
+                    class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 font-georgia">Sentry Side</h3>
+                    <p class="text-text-secondary md:mb-6 mb-3 leading-relaxed">Streamlined personnel management with scheduling, reporting, and performance tracking</p>
+                    <div 
+                        class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 
+                        flex items-center justify-center overflow-hidden shadow-lg">
+                        <img 
+                            src="/sentry_side.png" 
+                            alt="Sentry Side" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <a href="#" class="text-aquiline-red font-medium hover:text-red-600 transition-colors flex items-center gap-2">
+                        Explore Sentry Side <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div 
+                    class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 font-georgia">Aquiline Intelligence</h3>
+                    <p class="text-text-secondary md:mb-6 mb-3 leading-relaxed">Specialized tools for crisis response, resource allocation, and field coordination.</p>
+                    <div 
+                        class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 
+                        flex items-center justify-center overflow-hidden shadow-lg">
+                        <img 
+                            src="/aquiline_intelligence.png" 
+                            alt="Aquiline Intelligence" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    <a href="#" class="text-aquiline-red font-medium hover:text-red-600 transition-colors flex items-center gap-2">
+                        Explore Aquiline Intelligence <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
+                    What We Do
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Comprehensive security solutions powered by advanced technology and local expertise
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div 
+                    class="md:p-8 p-5 rounded-xl bg-white border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg"
+                >
+                    <div class="flex md:flex-col flex-row items-center gap-4">
+                        <div 
+                            class="md:w-16 md:h-16 w-12 h-12 bg-gradient-to-br from-aquiline-red to-red-600 
+                            rounded-xl flex items-center justify-center text-white text-2xl mb-6"
+                        >
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="md:text-xl text-lg font-bold mb-4 text-gray-800">Location - Based Services</h3>
+                    </div>
+                    <ul class="list-none space-y-3">
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Real-time asset tracking and monitoring</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Geofencing and location intelligence</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Fleet management solutions</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Emergency response coordination</li>
+                    </ul>
+                </div>
+                <div 
+                    class="md:p-8 p-5 rounded-xl bg-white border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg"
+                >
+                    <div class="flex md:flex-col flex-row items-center gap-4">
+                        <div 
+                            class="md:w-16 md:h-16 w-12 h-12 bg-gradient-to-br from-aquiline-red to-red-600 
+                            rounded-xl flex items-center justify-center text-white text-2xl mb-6"
+                        >
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="md:text-xl text-lg font-bold mb-4 text-gray-800">Security Function Automation</h3>
+                    </div>
+                    <ul class="list-none space-y-3">
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Automated threat detection systems</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Intelligent surveillance networks</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Access control automation</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Incident response workflows</li>
+                    </ul>
+                </div>
+                <div 
+                    class="md:p-8 p-5 rounded-xl bg-white border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg"
+                >
+                    <div class="flex md:flex-col flex-row items-center gap-4">
+                        <div 
+                            class="md:w-16 md:h-16 w-12 h-12 bg-gradient-to-br from-aquiline-red to-red-600 
+                            rounded-xl flex items-center justify-center text-white text-2xl mb-6"
+                        >
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="md:text-xl text-lg font-bold mb-4 text-gray-800">Security Information Management</h3>
+                    </div>
+                    <ul class="list-none space-y-3">
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Centralized security data analytics</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Risk assessment and reporting</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Compliance management systems</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Security metrics and KPI tracking</li>
+                    </ul>
+                </div>
+                <div 
+                    class="md:p-8 p-5 rounded-xl bg-white border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg"
+                >
+                    <div class="flex md:flex-col flex-row items-center gap-4">
+                        <div 
+                            class="md:w-16 md:h-16 w-12 h-12 bg-gradient-to-br from-aquiline-red to-red-600 
+                            rounded-xl flex items-center justify-center text-white text-2xl mb-6"
+                        >
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="md:text-xl text-lg font-bold mb-4 text-gray-800">Cybersecurity</h3>
+                    </div>
+                    <ul class="list-none space-y-3">
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Network security and monitoring</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Vulnerability assessment and testing</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Incident response and forensics</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Security awareness training</li>
+                    </ul>
+                </div>
+                <div 
+                    class="md:p-8 p-5 rounded-xl bg-white border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg"
+                >
+                    <div class="flex md:flex-col flex-row items-center gap-4">
+                        <div 
+                            class="md:w-16 md:h-16 w-12 h-12 bg-gradient-to-br from-aquiline-red to-red-600 
+                            rounded-xl flex items-center justify-center text-white text-2xl mb-6"
+                        >
+                            <i class="fas fas fa-fighter-jet"></i>
+                        </div>
+                        <h3 class="md:text-xl text-lg font-bold mb-4 text-gray-800">Defense Solutions</h3>
+                    </div>
+                    <ul class="list-none space-y-3">
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Military-grade security systems</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Border control and surveillance</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Critical infrastructure protection</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Command and control systems</li>
+                    </ul>
+                </div>
+                <div 
+                    class="md:p-8 p-5 rounded-xl bg-white border border-gray-200 transition-all 
+                    hover:-translate-y-2 hover:shadow-lg"
+                >
+                    <div class="flex md:flex-col flex-row items-center gap-4">
+                        <div 
+                            class="md:w-16 md:h-16 w-12 h-12 bg-gradient-to-br from-aquiline-red to-red-600 
+                            rounded-xl flex items-center justify-center text-white text-2xl mb-6"
+                        >
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3 class="md:text-xl text-lg font-bold mb-4 text-gray-800">Integration & Consulting</h3>
+                    </div>
+                    <ul class="list-none space-y-3">
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">System integration and deployment</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Security architecture consulting</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Technology migration services</li>
+                        <li class="text-text-secondary relative pl-6 before:content-['•'] before:text-aquiline-red before:font-bold before:absolute before:left-0">Ongoing support and maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Leading Organizations Trust Aquiline -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-3xl lg:text-4xl font-bold leading-tight text-gray-800">
+                        Why Leading Organizations Trust Aquiline Technology
+                    </h2>
+                    <p class="text-lg text-text-secondary leading-relaxed">
+                        From guard management to intelligence systems, Aquiline Technology delivers reliable, locally-built security solutions designed for the most complex environments.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start border border-gray-200 p-3 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-gradient-to-br from-aquiline-red to-red-600 rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[16px] font-bold mb-1 text-gray-800">Indigenous Innovation with Global Impact</h4>
+                                <p class="text-text-secondary text-[15px]">World-class innovation to deliver smarter and effective protection.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start border border-gray-200 p-3 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-gradient-to-br from-aquiline-red to-red-600 rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[16px] font-bold mb-1 text-gray-800">Scalable and Future-Ready</h4>
+                                <p class="text-text-secondary text-[15px]">From small teams to national deployments, our platforms grow with you</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start border border-gray-200 p-3 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-gradient-to-br from-aquiline-red to-red-600 rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[16px] font-bold mb-1 text-gray-800">Tech-Driven & Field-Tested</h4>
+                                <p class="text-text-secondary text-[15px]">Enterprise-grade protection for your data</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start border border-gray-200 p-3 rounded-lg shadow-sm">
+                            <div class="w-10 h-10 bg-gradient-to-br from-aquiline-red to-red-600 rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[16px] font-bold mb-1 text-gray-800">People-Focused</h4>
+                                <p class="text-text-secondary text-[15px]">Designed to protect both assets and lives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-aquiline-red text-white px-8 py-3 rounded-lg font-medium transition-all 
+                        hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg">
+                        Start Free Trial
+                    </button>
+                </div>
+                <div class="flex justify-center rounded-lg overflow-hidden">
+                    <img src="/leading.png" alt="Leading Image" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-3xl lg:text-4xl font-bold leading-tight text-gray-800">You Trust Us. We Deliver Exceptionally.</h2>
+                    <p class="text-lg font-medium">Proven solutions. Local expertise. Unmatched reliability.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-text-secondary">
+                            <i class="fas fa-check text-blue-400 text-lg"></i>
+                            <span>Real-Time Tracking & Monitoring</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-text-secondary">
+                            <i class="fas fa-check text-blue-400 text-lg"></i>
+                            <span>Security Intelligence Dashboard</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-text-secondary">
+                            <i class="fas fa-check text-blue-400 text-lg"></i>
+                            <span>Automated Access & Incident Management</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-text-secondary">
+                            <i class="fas fa-check text-blue-400 text-lg"></i>
+                            <span>Integrated, Scalable Platform</span>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed">
+                        At Aquiline Technology, we don't just offer security—we build confidence. With a track record of excellence across high-risk sectors, humanitarian missions, and national infrastructure, we are the trusted force behind your operations. Whether you need advanced technology, on-ground support, or a fully integrated solution, we're here to deliver—every time.
+                    </p>
+                    <button class="bg-aquiline-red text-white px-8 py-3 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg">
+                        Contact Us
+                    </button>
+                </div>
+                <div class="flex justify-center">
+                    <div class="md:w-[480px] md:h-[550px] w-[330px] h-[250px] rounded-lg overflow-hidden shadow-lg">
+                        <img 
+                            src="/partnership.png" 
+                            alt="Partnership Pics" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-gray-800">
+                What Our Customers Say
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-lg font-bold text-gray-800">5.0</span>
+                        <div class="flex gap-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed mb-6 text-sm">
+                        "Tracking patrol officers used to be a nightmare — until we started using the mobile version of Traxovia. The geofence alerts, live location tracking, and instant incident reporting have made my job so much easier. I get notified the moment someone leaves their assigned zone."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800">Abidemi Tosin</h4>
+                            <p class="text-text-light text-sm">Field Supervisor, Fortress Security Nigeria</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="text-lg font-bold text-gray-800">5.0</span>
+                        <div class="flex gap-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary leading-relaxed mb-6 text-sm">
+                        "We manage dozens of field agents across rural areas, and this is the first system that's worked for us without fancy hardware. Even when offline, staff movement is recorded and synced later. It's improved our accountability, safety, and donor reporting."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-gray-800">Michael Okoro</h4>
+                            <p class="text-text-light text-sm">Regional Coordinator, Transtech Logistics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <section class="py-20 bg-[#111827] text-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-3xl lg:text-4xl font-bold leading-tight font-georgia">Ready to Secure the Future?</h2>
+                    <p class="text-xl opacity-90">Let's power Nigeria's security ecosystem together.</p>
+                    <button class="bg-aquiline-red text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg">
+                        Request a Consultation
+                    </button>
+                </div>
+                <!-- <div class="flex justify-center">
+                    <div class="relative w-80 h-80">
+                        <div class="absolute top-4 left-4 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0s;"></div>
+                        <div class="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 1s;"></div>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-aquiline-red to-red-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F2937] text-white py-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <img src="/dark_logo.png" alt="Aquiline Technology" class="w-[160px] h-[32px]">
+                    <p class="opacity-50 leading-relaxed">Smart security solution: Trusted proven and Scalable</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 opacity-80">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Features</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Pricing</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Demo</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 opacity-80">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">About</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Careers</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Contact</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 opacity-80">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Help Center</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Documentation</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Privacy Policy</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-10 pt-8 text-center opacity-60">
+                <p>&copy; 2025 Aquiline Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

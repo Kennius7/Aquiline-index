@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  aquiline-web:
+    build: .
+    container_name: aquiline-website
+    ports:
+      - "3000:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    restart: unless-stopped
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    networks:
+      - aquiline-network
+
+networks:
+  aquiline-network:
+    driver: bridge
