@@ -26,6 +26,55 @@
             }
         }
     </script>
+    <script>
+        let isDropdownOpen = false;
+
+        function toggleDropdown(event) {
+            // event.preventDefault();
+            const dropdown = document.getElementById('dropdown');
+            const chevron = document.getElementById('chevron');
+
+            if (isDropdownOpen) {
+                // Close dropdown
+                dropdown.classList.remove('open');
+                dropdown.style.opacity = '0';
+                chevron.style.transform = 'rotate(0deg)';
+                isDropdownOpen = false;
+            } else {
+                // Open dropdown
+                dropdown.classList.add('open');
+                dropdown.style.opacity = '1';
+                chevron.style.transform = 'rotate(180deg)';
+                isDropdownOpen = true;
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('dropdown');
+            const productsLink = event.target.closest('[onclick="toggleDropdown(event)"]');
+            
+            if (!productsLink && !dropdown.contains(event.target) && isDropdownOpen) {
+                dropdown.classList.remove('open');
+                dropdown.style.opacity = '0';
+                document.getElementById('chevron').style.transform = 'rotate(0deg)';
+                isDropdownOpen = false;
+            }
+        });
+    </script>
+    <style>
+        .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .dropdown-menu.open {
+            max-height: 200px;
+            transform: translateY(0);
+        }
+    </style>
     <link rel="stylesheet" href="custom.css">
 </head>
 <body class="font-roboto font-normal text-text-primary bg-white">
@@ -35,16 +84,59 @@
             <div class="max-w-6xl mx-auto px-5 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <img 
-                        src="/logo.png" 
+                        src="/public/images/logo.png" 
                         alt="Aquiline Technology" 
                         class="md:w-[180px] md:h-[36px] w-[120px] h-[24px]"
                     >
                 </div>
-                <ul class="hidden md:flex list-none gap-8 m-0">
-                    <li>
+                <ul class="hidden md:flex list-none gap-8 m-0 relative">
+                    <li onclick="toggleDropdown(event)" class="">
                         <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">
-                            Product <i class="fas fa-chevron-down text-xs"></i>
+                            Product <i id="chevron" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
                         </a>
+                        <div id="dropdown"
+                            class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 
+                            rounded-md shadow-lg opacity-0 transition-all duration-200 z-10"
+                        >
+                            <ul class="py-2">
+                                <li>
+                                    <a 
+                                        href="sentry_one.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        Sentinel One
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="traxovia.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        Traxovia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="sentry_stride.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        Sentinel Stride
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="aquiline_intelligence.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        Aquiline Intelligence
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Company</a>
@@ -99,7 +191,7 @@
                     <div class="relative w-[520px] h-[480px] rounded-2xl flex items-center justify-center 
                         overflow-hidden">
                         <img 
-                            src="/header1.png" 
+                            src="/public/images/header1.png" 
                             alt="Hero Image" 
                             class="w-full h-full object-cover"
                         >
@@ -133,7 +225,7 @@
                         class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 flex 
                         items-center justify-center overflow-hidden shadow-lg">
                         <img 
-                            src="/sentinel1.png" 
+                            src="/public/images/sentinel1.png" 
                             alt="Sentinel One" 
                             class="w-full h-full object-cover"
                         >
@@ -153,7 +245,7 @@
                         class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 
                         flex items-center justify-center overflow-hidden shadow-lg">
                         <img 
-                            src="/traxovia.png" 
+                            src="/public/images/traxovia.png" 
                             alt="Traxovia" 
                             class="w-full h-full object-cover"
                         >
@@ -165,13 +257,13 @@
                 <div 
                     class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200 transition-all 
                     hover:-translate-y-2 hover:shadow-lg">
-                    <h3 class="text-xl font-bold mb-4 text-gray-800 font-georgia">Sentry Side</h3>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800 font-georgia">Sentry Stride</h3>
                     <p class="text-text-secondary md:mb-6 mb-3 leading-relaxed">Streamlined personnel management with scheduling, reporting, and performance tracking</p>
                     <div 
                         class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 
                         flex items-center justify-center overflow-hidden shadow-lg">
                         <img 
-                            src="/sentry_side.png" 
+                            src="/public/images/sentry_side.png" 
                             alt="Sentry Side" 
                             class="w-full h-full object-cover"
                         >
@@ -189,7 +281,7 @@
                         class="md:w-[430px] md:h-[172px] w-[280px] h-[150px] rounded-lg md:mb-10 mb-4 
                         flex items-center justify-center overflow-hidden shadow-lg">
                         <img 
-                            src="/aquiline_intelligence.png" 
+                            src="/public/images/aquiline_intelligence.png" 
                             alt="Aquiline Intelligence" 
                             class="w-full h-full object-cover"
                         >
@@ -393,7 +485,7 @@
                     </button>
                 </div>
                 <div class="flex justify-center rounded-lg overflow-hidden">
-                    <img src="/leading.png" alt="Leading Image" class="w-full h-auto">
+                    <img src="/public/images/leading.png" alt="Leading Image" class="w-full h-auto">
                 </div>
             </div>
         </div>
@@ -434,7 +526,7 @@
                 <div class="flex justify-center">
                     <div class="md:w-[480px] md:h-[550px] w-[330px] h-[250px] rounded-lg overflow-hidden shadow-lg">
                         <img 
-                            src="/partnership.png" 
+                            src="/public/images/partnership.png" 
                             alt="Partnership Pics" 
                             class="w-full h-full object-cover"
                         >
@@ -529,7 +621,7 @@
         <div class="max-w-6xl mx-auto px-5">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div class="space-y-4">
-                    <img src="/dark_logo.png" alt="Aquiline Technology" class="w-[160px] h-[32px]">
+                    <img src="/public/images/dark_logo.png" alt="Aquiline Technology" class="w-[160px] h-[32px]">
                     <p class="opacity-50 leading-relaxed">Smart security solution: Trusted proven and Scalable</p>
                     <div class="flex gap-4">
                         <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
