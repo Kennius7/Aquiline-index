@@ -34,8 +34,11 @@
         <nav class="py-4">
             <div class="max-w-6xl mx-auto px-5 flex justify-between items-center">
                 <div class="flex items-center gap-3">
-                    <img src="logo.svg" alt="Aquiline Technology" class="w-10 h-10">
-                    <span class="text-xl font-bold text-gray-800 font-georgia">Aquiline</span>
+                    <img 
+                        src="/public/images/Traxovia_logo.png" 
+                        alt="Traxovia Logo" 
+                        class="md:w-[150px] md:h-[30px] w-[100px] h-[20px]"
+                    >
                 </div>
                 <ul class="hidden md:flex list-none gap-8 m-0">
                     <li><a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">Product <i class="fas fa-chevron-down text-xs"></i></a></li>
@@ -43,7 +46,12 @@
                     <li><a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Pricing</a></li>
                     <li><a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Contact us</a></li>
                 </ul>
-                <button class="bg-gray-800 text-white border-none py-3 px-6 rounded-lg font-medium cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 flex items-center gap-2">Book demo <i class="fas fa-arrow-right"></i></button>
+                <button 
+                    class="bg-gray-800 text-white border-none py-2 px-5 rounded-lg font-medium 
+                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 
+                    md:flex hidden items-center gap-2 ">
+                    Book demo <i class="fas fa-arrow-right"></i>
+                </button>
                 <div class="md:hidden flex flex-col cursor-pointer">
                     <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
                     <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
@@ -53,67 +61,26 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <!-- <section class="pt-32 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen flex items-center">
-        <div class="max-w-6xl mx-auto px-5">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight font-georgia">
-                        <span class="text-aquiline-blue">Traxovia</span><br>
-                        Real-Time Tracking & Analytics<br>
-                        For Smarter Fleet & Asset Management
-                    </h1>
-                    <p class="text-xl text-text-secondary leading-relaxed">
-                        Optimize deployment, monitor movement, and ensure safety with advanced geofencing and analytics. Built for reliability in challenging environments.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="bg-aquiline-red text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2">
-                            Request Demo <i class="fas fa-arrow-right"></i>
-                        </button>
-                        <button class="border-2 border-gray-300 text-text-primary px-8 py-4 rounded-lg font-medium transition-all hover:border-aquiline-red hover:text-aquiline-red hover:-translate-y-1 flex items-center justify-center gap-2">
-                            Download Brochure <i class="fas fa-download"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="flex justify-center">
-                    <div class="relative w-96 h-96 bg-gradient-to-br from-aquiline-blue to-blue-600 rounded-3xl flex items-center justify-center overflow-hidden">
-                        <div class="absolute top-8 left-8 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white animate-bounce" style="animation-delay: 0s;">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="absolute top-6 right-12 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white animate-bounce" style="animation-delay: 0.5s;">
-                            <i class="fas fa-route"></i>
-                        </div>
-                        <div class="absolute bottom-8 left-12 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-white animate-bounce" style="animation-delay: 1s;">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <div class="text-8xl text-cyan-400 animate-pulse">
-                            <i class="fas fa-location-arrow"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
 
     <!-- Hero Section -->
-    <section class="bg-white py-10">
-        <div class="max-w-7xl mx-auto p-20 text-center">
-            <h1 class="text-6xl font-bold text-brand-dark mb-6 leading-tight">
+    <section class="bg-white mt-20">
+        <div class="max-w-7xl mx-auto md:p-10 p-4 text-center">
+            <h1 class="md:text-6xl text-3xl font-bold text-brand-dark mb-6 leading-tight">
                 Command Your Fleet.<br>
-                <span class="text-5xl">In Real Time.</span>
+                <span class="md:text-5xl text-3xl">In Real Time.</span>
             </h1>
-            <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+            <p class="md:text-xl text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
                 Track, assign, and manage every vehicle with ease. Fleet operations—smarter, faster, and fully reimagined.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button class="bg-aquiline-red text-white px-8 py-3 rounded-lg hover:bg-red-600 transition-colors">
-                    Book a Demo →
+            <div class="flex flex-row gap-4 justify-center items-center">
+                <button class="bg-aquiline-red text-white md:px-8 md:py-3 px-4 py-2 rounded-lg 
+                    hover:bg-red-600 transition-colors">
+                    Book a Demo
                 </button>
-                <button class="text-brand-dark border border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-100 
-                    transition-colors"
+                <button class="text-brand-dark border border-gray-300 md:px-8 md:py-3 px-4 py-2 rounded-lg 
+                    hover:bg-gray-100 transition-colors"
                 >
-                    Start a free Trial →
+                    Start a free Trial
                 </button>
             </div>
         </div>
@@ -121,8 +88,8 @@
 
     <!-- Dashboard Preview -->
     <section class="pt-10 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="bg-white rounded-t-3xl overflow-hidden">
+        <div class="max-w-5xl mx-auto md:px-6 px-4">
+            <div class="bg-white md:rounded-t-3xl rounded-t-xl overflow-hidden">
                 <img 
                     src="/public/images/traxovia_dashboard.png" 
                     alt="dashboard" 
@@ -134,20 +101,25 @@
 
 
     <!-- Why Choose Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-brand-dark mb-4">Why Choose Traxovia</h2>
-                <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+    <section class="md:py-20 py-14 bg-gray-50">
+        <div class="max-w-7xl mx-auto md:px-6 px-4">
+            <div class="text-center md:mb-16 mb-8">
+                <h2 class="md:text-4xl text-3xl font-bold text-brand-dark md:mb-4 mb-3">Why Choose Traxovia</h2>
+                <p class="md:block hidden text-lg text-gray-600 max-w-4xl mx-auto">
                     Built for real-world operations, our fleet management platform combines smart technology with simplicity — offering mobile-based tracking, real-time geofencing, trip monitoring, and personnel visibility. It's modern, efficient, and ready for teams on the move.
+                </p>
+                <p class="md:hidden block text-[16px] text-gray-600 max-w-4xl mx-auto">
+                    Advanced Fleet Management Solutions For Modern Businesses.
                 </p>
             </div>
 
-            <div class="space-y-8">
-                <div class="flex justify-between items-center">
+            <div class="flex flex-col item-center gap-6">
+                <div class="flex md:flex-row flex-col md:justify-between justify-center md:gap-0 gap-6">
                     <!-- Real Time Tracking -->
-                    <div class="bg-white shadow-sm flex flex-col items-center w-[800px] h-[500px] rounded-[35px] 
-                        overflow-hidden px-8 relative"
+                    <div 
+                        class="bg-white shadow-sm flex flex-col items-center md:w-[800px] md:h-[500px] 
+                        w-fit h-[360px] md:rounded-[35px] rounded-2xl overflow-hidden 
+                        md:px-8 px-3 relative"
                     >
                         <div class="flex items-center gap-3 rounded-b-lg overflow-hidden ">
                             <img 
@@ -156,10 +128,11 @@
                                 class="w-full h-full object-cover"
                             >
                         </div>
-                        <div class="absolute z-4 bottom-1 left-8">
+                        <div class="absolute z-4 bottom-1 md:left-8 left-3 text-gray-700 
+                            flex flex-col items-start md:p-0 p-2 md:mb-0 mb-5">
                             <h3 class="text-lg font-semibold mb-1">Real Time Tracking</h3>
-                            <div class="mb-4">
-                                <h4 class="text-[15px] font-semibold mb-1">Trip Route + History</h4>
+                            <div class="md:mb-4 mb-0">
+                                <h4 class="md:text-[15px] text-[14px] font-semibold mb-1">Trip Route + History</h4>
                                 <ul class="text-sm space-y-2 text-gray-600">
                                     <li>• Real-time route line drawn on the map.</li>
                                     <li>• Breadcrumb trail shows where the vehicle has been.</li>
@@ -170,16 +143,17 @@
                     </div>
 
                     <!-- Geofencing -->
-                    <div class="bg-white shadow-sm flex flex-col items-center w-[390px] h-[500px] rounded-[35px] 
-                        overflow-hidden py-6 relative">
-                        <div class="flex items-center gap-3 rounded-b-lg overflow-hidden ">
+                    <div class="bg-white shadow-sm flex flex-col items-center md:w-[390px] md:h-[500px] 
+                        w-fit h-[400px] md:rounded-[35px] rounded-2xl overflow-hidden 
+                        md:px-8 px-0 relative">
+                        <div class="w-full h-[200px] overflow-hidden ">
                             <img 
                                 src="/public/images/geofence1.png" 
                                 alt="Map VIew Pic" 
                                 class="w-full h-full object-cover"
                             >
                         </div>
-                        <div class="px-8">
+                        <div class="md:px-8 px-5 md:py-0 py-2">
                             <h3 class="text-lg font-semibold mb-1">Geofencing That Drives Precision</h3>
                             <p class="text-gray-600 mb-1">
                                 Monitor drivers, vehicles and assets within defined zones.
@@ -194,18 +168,18 @@
                     </div>
                 </div>
 
-                <div class="flex justify-between items-center">
+                <div class="flex md:flex-row flex-col md:justify-between justify-center items-center md:gap-0 gap-6">
                     <!-- Human Tracking -->
-                    <div class="bg-white shadow-sm flex flex-col items-center w-[390px] h-[500px] rounded-[35px] 
-                        overflow-hidden relative">
+                    <div class="bg-white shadow-sm flex flex-col items-center md:w-[390px] md:h-[500px] 
+                        w-fit h-[400px] md:rounded-[35px] rounded-2xl overflow-hidden relative">
                         <div class="p-8">
                             <h3 class="text-lg font-semibold mb-1">Human Tracking, Reimagined</h3>
-                            <p class="text-gray-600 mb-1">
-                                Track User movement, behavior, and safety in real time — because 
+                            <p class="text-gray-600 mb-1 text-sm">
+                                Track user movement, behavior, and safety in real time — because 
                                 managing vehicles starts with managing people.
                             </p>
                         </div>
-                        <div class="flex items-center gap-3 overflow-hidden ">
+                        <div class="flex items-center gap-3 overflow-hidden md:mb-0 mb-5">
                             <img 
                                 src="/public/images/tracking1.png" 
                                 alt="Map VIew Pic" 
@@ -215,36 +189,42 @@
                     </div>
 
                     <!-- Trip Timeline -->
-                    <div class="bg-white shadow-sm flex flex-col items-center w-[390px] h-[500px] rounded-[35px] 
-                        overflow-hidden p-8 relative">
-                        <div class="flex items-center gap-3 rounded-lg overflow-hidden ">
+                    <div class="bg-white shadow-sm flex flex-col items-center md:w-[390px] md:h-[500px] 
+                        w-fit h-[400px] md:rounded-[35px] rounded-2xl overflow-hidden md:p-6 p-0 relative">
+                        <div class="flex items-center rounded-lg overflow-hidden shadow-lg md:m-0 m-3">
                             <img 
-                                src="/public/images/mapview1.png" 
+                                src="/public/images/trip1.png" 
                                 alt="Map VIew Pic" 
                                 class="w-full h-full object-cover"
                             >
                         </div>
-                        <h3 class="text-2xl font-bold mb-6">Real-Time Trip Timeline Tracking</h3>
-                        <p class="text-gray-600 mb-6">
-                            Stay in control of every trip with a live, step-by-step visual 
-                            timeline of trip progress and events.
-                        </p>
+                        <div class="flex flex-col items-start md:p-0 p-5">
+                            <h3 class="text-lg font-semibold mb-1">Real-Time Trip Timeline Tracking</h3>
+                            <p class="text-gray-600 mb-1 text-sm">
+                                Stay in control of every trip with a live, step-by-step visual 
+                                timeline of trip progress and events.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Geofence Alerts -->
-                    <div class="bg-white shadow-sm flex flex-col items-center w-[390px] h-[500px] rounded-[35px] 
-                        overflow-hidden p-8 relative">
-                        <div class="flex items-center gap-3 rounded-lg overflow-hidden ">
+                    <div class="bg-white shadow-sm flex flex-col items-center md:w-[390px] md:h-[500px] 
+                        w-fit h-[400px] md:rounded-[35px] rounded-2xl overflow-hidden md:p-6 p-0 relative">
+                        <div class="flex items-center rounded-lg overflow-hidden shadow-lg md:m-0 m-3">
                             <img 
-                                src="/public/images/mapview1.png" 
+                                src="/public/images/geofence_alert1.png" 
                                 alt="Map VIew Pic" 
                                 class="w-full h-full object-cover"
                             >
                         </div>
-                        <h3 class="text-2xl font-bold mb-6">Geofence Alerts for Smarter Control</h3>
-                        <p class="text-gray-600 mb-6">Get real-time alerts when people or assets enter or exit designated zones, reduce risk, enforce boundaries, and stay ahead.</p>
+                        <div class="flex flex-col items-start md:p-0 p-5">
+                            <h3 class="text-lg font-semibold mb-1">Geofence Alerts for Smarter Control</h3>
+                            <p class="text-gray-600 mb-1 text-sm">
+                                Get real-time alerts when people or assets enter or exit designated 
+                                zones, reduce risk, enforce boundaries, and stay ahead.
+                            </p>
+                        </div>
                     </div>
-
                 </div>
 
             </div>
@@ -252,61 +232,211 @@
     </section>
 
 
-    <!-- Tracking & Geofencing -->
-    <section class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-5">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h2 class="text-3xl lg:text-4xl font-bold leading-tight text-gray-800 font-georgia">Advanced Tracking & Geofencing</h2>
-                    <p class="text-lg text-text-secondary leading-relaxed">Monitor assets, set custom geofences, and receive instant alerts for unauthorized movement or emergencies.</p>
-                    <div class="space-y-6">
-                        <div class="flex gap-4 items-start">
-                            <div class="w-12 h-12 bg-gradient-to-br from-aquiline-red to-red-600 rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">
-                                <i class="fas fa-map-pin"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-bold mb-2 text-gray-800 font-georgia">Custom Geofences</h4>
-                                <p class="text-text-secondary">Define zones, automate alerts, and control access.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="w-12 h-12 bg-gradient-to-br from-aquiline-blue to-blue-600 rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">
-                                <i class="fas fa-bell"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-bold mb-2 text-gray-800 font-georgia">Instant Notifications</h4>
-                                <p class="text-text-secondary">Get notified for boundary breaches, emergencies, and maintenance needs.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 items-start">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-lg flex items-center justify-center text-white text-lg flex-shrink-0">
-                                <i class="fas fa-sync-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-bold mb-2 text-gray-800 font-georgia">Seamless Sync</h4>
-                                <p class="text-text-secondary">Works offline and syncs automatically when connected.</p>
-                            </div>
+    <!-- Human-Centered Experience -->
+    <section class="md:py-20 py-14 bg-gray-50">
+        <div class="max-w-7xl mx-auto md:px-6 px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="">
+                    <h2 class="text-3xl font-bold text-brand-dark mb-4">
+                        A human-centered fleet management experience
+                    </h2>
+                    <p class="md:block hidden text-gray-600 mb-8">
+                        Our system puts control, visibility, and flexibility at the core. It's built with your field realities in mind, designed to track people and vehicles together, automate operations.
+                    </p>
+                    <p class="md:hidden block text-gray-600 mb-8">
+                        Our system gives you complete control, visibility, and flexibility. It tracks people and vehicles while automating tasks.
+                    </p>
+
+                    <div class="md:hidden block bg-white rounded-2xl overflow-hidden w-fit h-[320px] mb-8">
+                        <div class="flex items-center rounded-md overflow-hidden">
+                            <img 
+                                src="/public/images/human_centered1.png" 
+                                alt="Human Centered Experience Pic" 
+                                class="w-full h-full object-cover"
+                            >
                         </div>
                     </div>
+
+                    <div class="md:space-y-3 space-y-5">
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl shadow-sm border border-gray-100 bg-white">
+                            <div class="w-10 h-10 bg-aquiline-red/20 rounded-full flex items-center justify-center 
+                                flex-shrink-0">
+                                <i class="fas fas fa-users text-sm text-aquiline-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Human + Asset Visibility in One Dashboard</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Monitor both drivers and field staff live, with full activity logs and safety alerts.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl shadow-sm border border-gray-100 bg-white">
+                            <div class="w-10 h-10 bg-aquiline-red/20 rounded-full flex items-center justify-center 
+                                flex-shrink-0">
+                                <i class="fas fas far fa-bell text-sm text-aquiline-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Dynamic Geofencing with Alerts</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Assign zones, receive instant alerts, and enforce boundaries in real time.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl shadow-sm border border-gray-100 bg-white">
+                            <div class="w-10 h-10 bg-aquiline-red/20 rounded-full flex items-center justify-center 
+                                flex-shrink-0">
+                                <i class="fas fas fas fa-mobile-alt text-sm text-aquiline-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Mobile-Based Real-Time Tracking</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Track vehicles and personnel without GPS hardware — just smartphones.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl shadow-sm border border-gray-100 bg-white">
+                            <div class="w-10 h-10 bg-aquiline-red/20 rounded-full flex items-center justify-center 
+                                flex-shrink-0">
+                                <i class="fas fas fas fab fas fa-binoculars text-sm text-aquiline-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Smart Maintenance & Incident Logs</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Prevent breakdowns and capture field issues with automated alerts and logs.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button 
+                            class="bg-aquiline-red text-white border-none py-3 px-6 rounded-lg font-medium 
+                            cursor-pointer transition-all hover:bg-red-500 hover:-translate-y-0.5 
+                            md:hidden flex items-center gap-2">
+                            Start Free Trial
+                        </button>
+
+                    </div>
                 </div>
-                <div class="flex justify-center">
-                    <div class="relative w-80 h-80 bg-gradient-to-br from-aquiline-blue to-blue-600 rounded-full flex items-center justify-center text-white text-6xl shadow-lg">
-                        <i class="fas fa-globe"></i>
-                        <div class="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 0.5s;"></div>
-                        <div class="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center animate-bounce" style="animation-delay: 1s;"></div>
-                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-gradient-to-br from-aquiline-red to-red-600 rounded-full flex items-center justify-center text-white text-2xl">
-                            <i class="fas fa-shield-alt"></i>
+
+                <div class="md:block hidden bg-white rounded-2xl overflow-hidden w-[540px] h-[600px]">
+                    <div class="flex items-center rounded-md overflow-hidden">
+                        <img 
+                            src="/public/images/human_centered1.png" 
+                            alt="Human Centered Experience Pic" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Control In Your Pocket -->
+    <section class="md:py-20 py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-12 gap-8 items-start">
+
+                <div class="md:block hidden overflow-hidden w-[540px] h-[600px] mt-10">
+                    <div class="flex items-center rounded-md overflow-hidden">
+                        <img 
+                            src="/public/images/mobile1.png" 
+                            alt="Mobile Experience Pic" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                </div>
+
+                <div class="">
+                    <h2 class="text-3xl font-bold text-brand-dark mb-4 md:text-left text-center">
+                        Fleet Control In Your Pocket
+                    </h2>
+                    <p class="text-gray-600 mb-8">
+                        Our powerful mobile-based platform that brings real-time tracking, 
+                        trip management, and field visibility to any smartphone — no extra 
+                        hardware, no complexity.
+                    </p>
+
+                    <div class="md:hidden block overflow-hidden w-fit h-[350px] mt-10">
+                        <div class="flex items-center rounded-md overflow-hidden">
+                            <img 
+                                src="/public/images/mobile1.png" 
+                                alt="Mobile Experience Pic" 
+                                class="w-full h-full object-cover"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl shadow-sm border border-gray-100 bg-white">
+                            <div class="w-10 h-10 bg-aquiline-red/20 rounded-full flex items-center justify-center 
+                                flex-shrink-0">
+                                <i class="fas fas fas fas fa-external-link-alt text-sm text-aquiline-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Instant Accessibility</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Anyone with a smartphone can use the platform — from drivers to 
+                                    field workers, and supervisors.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl shadow-sm border border-gray-100 bg-white">
+                            <div class="w-10 h-10 bg-aquiline-red/20 rounded-full flex items-center justify-center 
+                                flex-shrink-0">
+                                <i class="fas fas fas fa-cogs text-sm text-aquiline-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Easy Setup And Onboarding</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Just download the app, log in, and start tracking or managing 
+                                    trips — ideal for fast-growing teams or remote deployments.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-2xl shadow-sm border border-gray-100 bg-white">
+                            <div class="w-10 h-10 bg-aquiline-red/20 rounded-full flex items-center justify-center 
+                                flex-shrink-0">
+                                <i class="fas fas fas fa-phone text-sm text-aquiline-red"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Live Alerts And Communication</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Receive push notifications, trip updates, and emergency alerts 
+                                    directly on your phone — no need to log into a desktop dashboard.
+                                </p>
+                            </div>
+                        </div>
+
+                        <button 
+                            class="bg-aquiline-red text-white border-none py-3 px-6 rounded-lg font-medium 
+                            cursor-pointer transition-all hover:bg-red-500 hover:-translate-y-0.5 
+                            md:flex hidden items-center gap-2">
+                            Start Free Trial
+                        </button>
+                        <div class="md:hidden flex justify-center items-center pt-14">
+                            <button 
+                                class="bg-aquiline-red text-white border-none py-3 px-6 rounded-lg font-medium 
+                                cursor-pointer transition-all hover:bg-red-500 hover:-translate-y-0.5 
+                                flex items-center gap-2">
+                                Get Started
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- Testimonials -->
     <section class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto px-5">
-            <h2 class="text-3xl lg:text-4xl font-bold text-center mb-12 text-gray-800 font-georgia">What Our Customers Say</h2>
+        <div class="max-w-6xl mx-auto md:px-5 px-4">
+            <h2 class="md:text-4xl text-[28px] font-bold text-center md:mb-12 mb-6 text-gray-800">
+                What Our Customers Say
+            </h2>
+            <p class="md:hidden block text-text-secondary leading-relaxed mb-12 text-center">
+                Unfiltered feedback from people who matter most.
+            </p>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
                     <div class="flex items-center gap-4 mb-6">
@@ -324,7 +454,7 @@
                     </p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-                        <div>
+                        <div class="flex-1">
                             <h4 class="font-bold text-gray-800">Amina Yusuf</h4>
                             <p class="text-text-light text-sm">Fleet Manager, TransAfrica Logistics</p>
                         </div>
@@ -346,7 +476,7 @@
                     </p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-                        <div>
+                        <div class="flex-1">
                             <h4 class="font-bold text-gray-800">Samuel Eze</h4>
                             <p class="text-text-light text-sm">Operations Lead, GreenField Farms</p>
                         </div>
@@ -357,17 +487,29 @@
     </section>
 
     <!-- CTA Footer -->
-    <section class="py-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white">
+    <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
-                    <h2 class="text-3xl lg:text-4xl font-bold mb-4 font-georgia">Ready to Transform Your Fleet?</h2>
-                    <p class="text-lg opacity-80">Get started with Traxovia today. Book a demo or talk to our team for a custom solution.</p>
-                    <button class="bg-aquiline-red text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg">Contact Us</button>
-                </div>
-                <div class="flex justify-center">
-                    <div class="w-80 h-80 bg-gradient-to-br from-aquiline-red to-red-600 rounded-full flex items-center justify-center text-white text-6xl shadow-lg">
-                        <i class="fas fa-hands-helping"></i>
+            <div class="flex flex-col items-center rounded-2xl shadow-sm border border-gray-50 md:p-8 p-3">
+                <div class="space-y-8 flex flex-col items-center">
+                    <h2 class="md:text-4xl text-2xl font-bold leading-tight md:text-left text-center">
+                        Take Full Control Of Your Fleet, Anytime, Anywhere
+                    </h2>
+                    <p class="md:text-xl text-sm opacity-90 text-center">
+                        Whether you're managing 10 vehicles or 1,000 personnel, our mobile-first 
+                        platform gives you real-time visibility, automated control, and total 
+                        peace of mind — all without the need for GPS hardware.
+                    </p>
+                    <div class="space-x-6 flex md:flex-row md:justify-between md:items-center 
+                        flex-col justify-center items-center md:px-0 px-10">
+                        <button class="bg-aquiline-red text-white md:px-6 md:py-3 px-12 py-3 rounded-lg font-medium 
+                            transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg">
+                            Book A Demo
+                        </button>
+                        <button class="bg-transparent text-gray-600 md:px-6 md:py-3 px-12 py-3 rounded-lg font-medium 
+                            transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg 
+                            border border-gray-100">
+                            Get Started For Free
+                        </button>
                     </div>
                 </div>
             </div>
@@ -375,51 +517,70 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+    <footer class="bg-[#1F2937] text-white py-16">
         <div class="max-w-6xl mx-auto px-5">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div class="space-y-4">
-                    <h3 class="text-xl font-bold font-georgia">Aquiline</h3>
-                    <p class="opacity-80 leading-relaxed">Smart security solution : Trusted proven and Scalable</p>
+                    <img 
+                        src="/public/images/Traxovia_logo.png" 
+                        alt="Traxovia Logo" 
+                        class="w-[160px] h-[32px]"
+                    >
+                    <p class="opacity-50 leading-relaxed">Modern Fleet Management without the hardware cost</p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white bg-opacity-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4 font-georgia">Product</h4>
+                    <h4 class="font-bold mb-4 opacity-80">Product</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Features</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Pricing</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Demo</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Integrations</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Features</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Pricing</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Demo</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Integrations</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4 font-georgia">Company</h4>
+                    <h4 class="font-bold mb-4 opacity-80">Resources</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">About</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Careers</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Contact</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Blog</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Help Center</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Documentation</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Privacy Policy</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4 font-georgia">Support</h4>
+                    <h4 class="font-bold mb-4 opacity-80">Company</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Help Center</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Documentation</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Privacy Policy</a></li>
-                        <li><a href="#" class="opacity-80 hover:opacity-100 transition-opacity">Terms of Service</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">About</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Careers</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Contact</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Blog</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white border-opacity-10 pt-8 text-center opacity-60">
-                <p>&copy; 2025 Aquiline Technology. All rights reserved.</p>
+            <div class="flex justify-between items-center border-t border-white border-opacity-10 pt-8 opacity-80">
+                <p class="text-center">&copy; 2025 Aquiline Technology. All rights reserved.</p>
+                <ul class="flex items-center gap-4">
+                    <li><a href="#" class="opacity-60 hover:opacity-80 transition-opacity">Terms</a></li>
+                    <li><a href="#" class="opacity-60 hover:opacity-80 transition-opacity">Privacy</a></li>
+                    <li><a href="#" class="opacity-60 hover:opacity-80 transition-opacity">Cookies</a></li>
+                </ul>
             </div>
         </div>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
@@ -452,198 +613,6 @@
 
 
 
-
-
-
-
-
-
-
-    <!-- Human-Centered Experience -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-brand-dark mb-6">A human-centered fleet management experience</h2>
-                    <p class="text-lg text-gray-600 mb-8">
-                        Our system puts control, visibility, and flexibility at the core. It's built with your field realities in mind, designed to track people and vehicles together, automate operations.
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <span class="text-red-600">👥</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Human + Asset Visibility in One Dashboard</h3>
-                                <p class="text-gray-600">Monitor both drivers and field staff live, with full activity logs and safety alerts.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <span class="text-red-600">🗺️</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Dynamic Geofencing with Alerts</h3>
-                                <p class="text-gray-600">Assign zones, receive instant alerts, and enforce boundaries in real time.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <span class="text-red-600">📱</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Mobile-Based Real-Time Tracking</h3>
-                                <p class="text-gray-600">Track vehicles and personnel without GPS hardware — just smartphones.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <span class="text-red-600">🔧</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold mb-2">Smart Maintenance & Incident Logs</h3>
-                                <p class="text-gray-600">Prevent breakdowns and capture field issues with automated alerts and logs.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-gray-900 rounded-2xl overflow-hidden">
-                    <div class="bg-white p-6">
-                        <div class="flex justify-between items-center mb-6">
-                            <h3 class="font-semibold">Assets</h3>
-                            <div class="flex space-x-4 text-sm">
-                                <button class="border px-3 py-1 rounded">🔽 Filters</button>
-                                <button class="border px-3 py-1 rounded">Date ▼</button>
-                                <button class="border px-3 py-1 rounded">Name ▼</button>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-3">
-                            <div class="grid grid-cols-4 text-sm font-medium text-gray-500 pb-2 border-b">
-                                <span>Asset Name</span>
-                                <span>Type</span>
-                                <span>ID Number</span>
-                                <span></span>
-                            </div>
-                            <div class="grid grid-cols-4 text-sm py-2">
-                                <span>Maxus Jeep AKD</span>
-                                <span>Truck</span>
-                                <span>2SYF2</span>
-                                <span></span>
-                            </div>
-                            <div class="grid grid-cols-4 text-sm py-2">
-                                <span>Maxus Jeep AKD</span>
-                                <span>Truck</span>
-                                <span>2SYF2</span>
-                                <span></span>
-                            </div>
-                            <div class="grid grid-cols-4 text-sm py-2">
-                                <span>Maxus Jeep AKD</span>
-                                <span>Truck</span>
-                                <span>2SYF2</span>
-                                <span></span>
-                            </div>
-                            <div class="grid grid-cols-4 text-sm py-2">
-                                <span>Maxus Jeep AKD</span>
-                                <span>Truck</span>
-                                <span>2SYF2</span>
-                                <span></span>
-                            </div>
-                            <div class="grid grid-cols-4 text-sm py-2">
-                                <span>Maxus Jeep AKD</span>
-                                <span>Truck</span>
-                                <span>2SYF2</span>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 border-t">
-                        <div class="flex justify-between items-center mb-4">
-                            <h3 class="font-semibold">Geofence</h3>
-                            <span class="text-sm">Geofence: 12 Bad</span>
-                        </div>
-                        
-                        <div class="h-48 bg-gray-100 rounded-lg relative">
-                            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-100 rounded-lg">
-                                <div class="absolute inset-4 border-2 border-red-300 border-dashed rounded-lg bg-red-50/30">
-                                    <div class="absolute top-1/3 left-1/3 w-3 h-3 bg-red-600 rounded-full"></div>
-                                    <div class="absolute top-1/2 left-1/2 w-3 h-3 bg-green-600 rounded-full"></div>
-                                    <div class="absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-600 rounded-full"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mobile App Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="relative">
-                    <!-- Phone mockup -->
-                    <div class="mx-auto w-64 h-[500px] bg-black rounded-3xl p-2 relative">
-                        <div class="bg-white h-full rounded-2xl overflow-hidden">
-                            <div class="bg-gray-900 text-white p-2 text-xs flex justify-between items-center">
-                                <span>••• ••• 📶 📶 📶</span>
-                                <span>9:41</span>
-                                <span>🔋 100%</span>
-                            </div>
-                            <div class="p-4">
-                                <div class="mb-4">
-                                    <h3 class="font-semibold mb-2">Agbado</h3>
-                                    <div class="h-32 bg-gray-100 rounded-lg relative">
-                                        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg">
-                                            <div class="absolute top-4 left-4 w-2 h-2 bg-blue-600 rounded-full"></div>
-                                            <div class="absolute top-16 right-8 w-2 h-2 bg-green-600 rounded-full"></div>
-                                            <div class="absolute bottom-8 left-12 w-2 h-2 bg-red-600 rounded-full"></div>
-                                        </div>
-                                    </div>
-                                    <div class="text-center mt-2">
-                                        <button class="text-blue-600 text-sm">+ Geo</button>
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-3 mb-4">
-                                    <div class="bg-blue-50 p-3 rounded-lg">
-                                        <div class="text-blue-600 text-xs mb-1">👥 Track People</div>
-                                        <div class="text-xs text-green-600">Currently Active</div>
-                                        <div class="flex -space-x-1 mt-1">
-                                            <div class="w-4 h-4 bg-gray-300 rounded-full"></div>
-                                            <div class="w-4 h-4 bg-gray-400 rounded-full"></div>
-                                            <span class="text-xs ml-1">+4 more</span>
-                                        </div>
-                                    </div>
-                                    <div class="bg-green-50 p-3 rounded-lg">
-                                        <div class="text-green-600 text-xs mb-1">🚗 T</div>
-                                        <div class="text-xs">No Asset</div>
-                                    </div>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-3">
-                                    <div class="bg-blue-50 p-3 rounded-lg">
-                                        <div class="text-blue-600 text-xs mb-1">🛡️ Safety Zones</div>
-                                        <div class="text-xs text-green-600">Currently Within safety zone</div>
-                                    </div>
-                                    <div class="bg-red-50 p-3 rounded-lg">
-                                        <div class="text-red-600 text-xs mb-1">⚠️ Alerts</div>
-                                        <div class="text-xs text-red-600">5 Alerts Found!!!</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stats overlay -->
-                    <div class="
 
 
 
