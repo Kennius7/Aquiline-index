@@ -145,6 +145,14 @@ canvas {
 }
 
 
+.tab-active {
+    @apply bg-aquiline-red text-white;
+}
+.tab-inactive {
+    @apply bg-white text-gray-400;
+}
+
+
 
 
 

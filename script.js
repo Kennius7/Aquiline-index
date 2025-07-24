@@ -622,7 +622,16 @@ document.head.appendChild(style);
 
 
 
+const indicator = document.getElementById('indicator');
+const tabs = document.querySelectorAll('#tabs button');
 
+function moveTab(index) {
+    indicator.style.left = `calc(${index * 33.3333}% + 0.25rem)`;
+    tabs.forEach((tab, i) => {
+        tab.classList.toggle('text-white', i === index);
+        tab.classList.toggle('text-gray-400', i !== index);
+    });
+}
 
 
 
