@@ -40,11 +40,83 @@
                         class="md:w-[150px] md:h-[30px] w-[100px] h-[20px]"
                     >
                 </div>
-                <ul class="hidden md:flex list-none gap-8 m-0">
-                    <li><a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">Product <i class="fas fa-chevron-down text-xs"></i></a></li>
-                    <li><a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Company</a></li>
-                    <li><a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Pricing</a></li>
-                    <li><a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Contact us</a></li>
+                <ul class="hidden md:flex list-none gap-8 m-0 relative">
+                    <li onclick="toggleDropdown(event)" class="">
+                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">
+                            Product <i id="chevron" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                        </a>
+                        <div 
+                            id="dropdown"
+                            class="dropdown-menu absolute top-12 left-0 w-[220px] bg-white 
+                            border border-gray-200 rounded-md shadow-lg opacity-0 transition-all 
+                            duration-200 z-10"
+                        >
+                            <ul class="">
+                                <li>
+                                    <a 
+                                        href="sentinel_one.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-shield-alt mr-3 text-gray-400"></i>
+                                        Sentinel One
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="traxovia.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
+                                        Traxovia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="sentry_stride.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-walking mr-3 text-gray-400"></i>
+                                        Sentry Stride
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="aquiline_intelligence.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                        Aquiline Intelligence
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="index.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fas fa-home mr-3 text-gray-400"></i>
+                                        Home
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a 
+                            href="about_us.html" 
+                            class="text-text-primary font-medium hover:text-aquiline-red transition-colors"
+                        >About Us</a>
+                    </li>
+                    <li>
+                        <a 
+                            href="contact_us.html" 
+                            class="text-text-primary font-medium hover:text-aquiline-red transition-colors"
+                        >Contact us</a>
+                    </li>
                 </ul>
                 <button 
                     class="bg-gray-800 text-white border-none py-2 px-5 rounded-lg font-medium 
@@ -52,10 +124,90 @@
                     md:flex hidden items-center gap-2 ">
                     Book demo <i class="fas fa-arrow-right"></i>
                 </button>
-                <div class="md:hidden flex flex-col cursor-pointer">
-                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
-                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
-                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
+                <div class="md:hidden relative">
+                    <a 
+                        href="#" 
+                        class="text-text-primary font-medium hover:text-aquiline-red transition-colors 
+                        flex items-center gap-1"
+                        onclick="toggleDropdownMobile(event)"
+                    >
+                        <i id="chevron" class="fas fa-bars text-[16px] transition-transform duration-300"></i>
+                    </a>
+
+                    <!-- Backdrop overlay -->
+                    <div 
+                        id="dropdownBackdrop"
+                        class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 invisible transition-all 
+                        duration-300"
+                        onclick="closeDropdownMobile()"
+                    ></div>
+
+                    <!-- Dropdown Menu -->
+                    <ul 
+                        id="dropdownMobile"
+                        class="fixed top-0 right-0 h-full w-80 bg-white border-l border-gray-200 
+                            shadow-2xl transform translate-x-full transition-all duration-500 ease-in-out z-50"
+                    >
+                        <!-- Close button -->
+                        <li class="border-b border-gray-200 p-4">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-text-primary">Aquiline</h3>
+                                <button 
+                                    onclick="closeDropdownMobile()"
+                                    class="text-gray-500 hover:text-gray-700 transition-colors p-1"
+                                >
+                                    <i class="fas fa-times text-xl"></i>
+                                </button>
+                            </div>
+                        </li>
+                        
+                        <!-- Menu items -->
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a 
+                                href="sentinel_one.html" 
+                                class="block px-6 py-4 text-text-primary hover:text-aquiline-red 
+                                transition-colors"
+                            >
+                                <i class="fas fa-shield-alt mr-3 text-gray-400"></i>
+                                Sentinel One
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="traxovia.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
+                                Traxovia
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="sentry_stride.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-walking mr-3 text-gray-400"></i>
+                                Sentry Stride
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="aquiline_intelligence.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                Aquiline Intelligence
+                            </a>
+                        </li>
+                            <a href="index.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                Home
+                            </a>
+                        </li>
+                            <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="about_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="contact_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -431,7 +583,7 @@
     <!-- Testimonials -->
     <section class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto md:px-5 px-4">
-            <h2 class="md:text-4xl text-[28px] font-bold text-center md:mb-12 mb-6 text-gray-800">
+            <h2 class="md:text-4xl text-[26px] font-bold text-center md:mb-12 mb-6 text-gray-800">
                 What Our Customers Say
             </h2>
             <p class="md:hidden block text-text-secondary leading-relaxed mb-12 text-center">
@@ -499,15 +651,15 @@
                         platform gives you real-time visibility, automated control, and total 
                         peace of mind — all without the need for GPS hardware.
                     </p>
-                    <div class="space-x-6 flex md:flex-row md:justify-between md:items-center 
-                        flex-col justify-center items-center md:px-0 px-10">
-                        <button class="bg-aquiline-red text-white md:px-6 md:py-3 px-12 py-3 rounded-lg font-medium 
+                    <div class="md:space-x-6 space-x-0 flex md:flex-row md:justify-between md:items-center 
+                        flex-col justify-center items-center md:px-0 px-4 md:gap-y-0 gap-y-2">
+                        <button class="bg-aquiline-red text-white md:px-6 md:py-3 px-20 py-3 rounded-lg font-medium 
                             transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg">
                             Book A Demo
                         </button>
-                        <button class="bg-transparent text-gray-600 md:px-6 md:py-3 px-12 py-3 rounded-lg font-medium 
-                            transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg 
-                            border border-gray-100">
+                        <button class="bg-white text-gray-600 md:px-6 md:py-3 px-14 py-3 rounded-lg 
+                            font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg 
+                            border border-gray-200 shadow-sm">
                             Get Started For Free
                         </button>
                     </div>
@@ -570,9 +722,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex justify-between items-center border-t border-white border-opacity-10 pt-8 opacity-80">
-                <p class="text-center">&copy; 2025 Aquiline Technology. All rights reserved.</p>
-                <ul class="flex items-center gap-4">
+            <div class="flex justify-between md:items-center items-start border-t border-white 
+                border-opacity-10 pt-8 opacity-80"
+            >
+                <p class="md:text-center text-left">
+                    &copy; 2025 Aquiline Technology. All rights reserved.
+                </p>
+                <ul class="flex md:flex-row flex-col items-center md:gap-4 gap-1">
                     <li><a href="#" class="opacity-60 hover:opacity-80 transition-opacity">Terms</a></li>
                     <li><a href="#" class="opacity-60 hover:opacity-80 transition-opacity">Privacy</a></li>
                     <li><a href="#" class="opacity-60 hover:opacity-80 transition-opacity">Cookies</a></li>

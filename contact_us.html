@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Aquiline Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                        'georgia': ['Georgia', 'serif'],
+                    },
+                    colors: {
+                        'aquiline-red': '#c55555',
+                        'aquiline-blue': '#4a90e2',
+                        'text-primary': '#333333',
+                        'text-secondary': '#666666',
+                        'text-light': '#999999',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-roboto font-normal text-text-primary bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="py-4">
+            <div class="max-w-6xl mx-auto px-5 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img 
+                        src="/public/images/logo.png" 
+                        alt="Aquiline Technology" 
+                        class="md:w-[180px] md:h-[36px] w-[120px] h-[24px]"
+                    >
+                </div>
+                <ul class="hidden md:flex list-none gap-8 m-0 relative">
+                    <li onclick="toggleDropdown(event)" class="">
+                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">
+                            Product <i id="chevron" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+                        </a>
+                        <div 
+                            id="dropdown"
+                            class="dropdown-menu absolute top-12 left-0 w-[220px] bg-white 
+                            border border-gray-200 rounded-md shadow-lg opacity-0 transition-all 
+                            duration-200 z-10"
+                        >
+                            <ul class="">
+                                <li>
+                                    <a 
+                                        href="sentry_one.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-shield-alt mr-3 text-gray-400"></i>
+                                        Sentinel One
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="traxovia.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
+                                        Traxovia
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="sentry_stride.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-walking mr-3 text-gray-400"></i>
+                                        Sentry Stride
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="aquiline_intelligence.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                        Aquiline Intelligence
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="index.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fas fa-home mr-3 text-gray-400"></i>
+                                        Home
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a 
+                            href="about_us.html" 
+                            class="text-text-primary font-medium hover:text-aquiline-red transition-colors"
+                        >About Us</a>
+                    </li>
+                    <li>
+                        <a 
+                            href="contact_us.html" 
+                            class="text-aquiline-red font-medium transition-colors"
+                        >Contact us</a>
+                    </li>
+                </ul>
+                <button 
+                    class="bg-gray-800 text-white border-none md:py-2 md:px-6 py-1 px-4 rounded-lg font-medium 
+                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 md:flex hidden
+                    items-center gap-2 md:text-[16px] text-[12px]"
+                >
+                    Book demo <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <div class="md:hidden relative">
+                    <a 
+                        href="#" 
+                        class="text-text-primary font-medium hover:text-aquiline-red transition-colors 
+                        flex items-center gap-1"
+                        onclick="toggleDropdownMobile(event)"
+                    >
+                        <i id="chevron" class="fas fa-bars text-[16px] transition-transform duration-300"></i>
+                    </a>
+
+                    <!-- Mobile menu content here -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-4xl lg:text-5xl xl:text-6xl font-normal leading-tight font-georgia mb-6">
+                    Get in <span class="text-aquiline-red">Touch</span> with Our <br>
+                    Security <span class="text-aquiline-red">Experts</span>
+                </h1>
+                <p class="text-lg text-text-secondary leading-relaxed mb-8">
+                    Ready to secure your operations? Our team is here to discuss your unique security challenges and provide tailored solutions that protect what matters most.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-aquiline-red text-white px-8 py-3 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2">
+                        Schedule a Call <i class="fas fa-phone"></i>
+                    </button>
+                    <button class="border-2 border-gray-300 text-text-primary px-8 py-3 rounded-lg font-medium transition-all hover:border-aquiline-red hover:text-aquiline-red hover:-translate-y-1 flex items-center justify-center gap-2">
+                        Request Demo <i class="fas fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center p-8 rounded-xl bg-gray-50 border border-gray-200 transition-all hover:-translate-y-2 hover:shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-aquiline-red to-red-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Phone Support</h3>
+                    <p class="text-text-secondary mb-4">Speak directly with our security consultants</p>
+                    <div class="space-y-2">
+                        <p class="font-medium text-aquiline-red">+234 (0) 813 123 4567</p>
+                        <p class="font-medium text-aquiline-red">+234 (0) 901 234 5678</p>
+                        <p class="text-text-light text-sm">Mon - Fri: 8:00 AM - 6:00 PM WAT</p>
+                    </div>
+                </div>
+
+                <div class="text-center p-8 rounded-xl bg-gray-50 border border-gray-200 transition-all hover:-translate-y-2 hover:shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-aquiline-red to-red-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Email Us</h3>
+                    <p class="text-text-secondary mb-4">Get detailed responses to your inquiries</p>
+                    <div class="space-y-2">
+                        <p class="font-medium text-aquiline-red">info@aquilinetech.com</p>
+                        <p class="font-medium text-aquiline-red">sales@aquilinetech.com</p>
+                        <p class="text-text-light text-sm">Response within 24 hours</p>
+                    </div>
+                </div>
+
+                <div class="text-center p-8 rounded-xl bg-gray-50 border border-gray-200 transition-all hover:-translate-y-2 hover:shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-aquiline-red to-red-600 rounded-xl flex items-center justify-center text-white text-2xl mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Visit Our Office</h3>
+                    <p class="text-text-secondary mb-4">Meet our team in person</p>
+                    <div class="space-y-2">
+                        <p class="font-medium text-text-primary">Lagos Head Office</p>
+                        <p class="text-text-secondary text-sm">
+                            123 Victoria Island Drive,<br>
+                            Lagos State, Nigeria
+                        </p>
+                        <p class="text-text-light text-sm">Mon - Fri: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
+                            Send Us a Message
+                        </h2>
+                        <p class="text-lg text-text-secondary">
+                            Fill out the form below and we'll get back to you within 24 hours to discuss your security needs.
+                        </p>
+                    </div>
+
+                    <form class="space-y-6" id="contactForm">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aquiline-red focus:border-transparent transition-all"
+                                    placeholder="John"
+                                >
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aquiline-red focus:border-transparent transition-all"
+                                    placeholder="Doe"
+                                >
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aquiline-red focus:border-transparent transition-all"
+                                    placeholder="john.doe@company.com"
+                                >
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aquiline-red focus:border-transparent transition-all"
+                                    placeholder="+234 xxx xxx xxxx"
+                                >
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company/Organization</label>
+                            <input 
+                                type="text" 
+                                id="company" 
+                                name="company"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aquiline-red focus:border-transparent transition-all"
+                                placeholder="Your Company Name"
+                            >
+                        </div>
+
+                        <div>
+                            <label for="interest" class="block text-sm font-medium text-gray-700 mb-2">Area of Interest</label>
+                            <select 
+                                id="interest" 
+                                name="interest"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aquiline-red focus:border-transparent transition-all"
+                            >
+                                <option value="">Select a solution</option>
+                                <option value="sentinel-one">Sentinel One - Monitoring & Threat Detection</option>
+                                <option value="traxovia">Traxovia - Fleet & Asset Tracking</option>
+                                <option value="sentry-stride">Sentry Stride - Personnel Management</option>
+                                <option value="aquiline-intelligence">Aquiline Intelligence - Security Analytics</option>
+                                <option value="cybersecurity">Cybersecurity Solutions</option>
+                                <option value="defense">Defense Solutions</option>
+                                <option value="integration">Integration & Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message"
+                                rows="5"
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-aquiline-red focus:border-transparent transition-all resize-none"
+                                placeholder="Tell us about your security challenges and requirements..."
+                            ></textarea>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <input 
+                                type="checkbox" 
+                                id="consent" 
+                                name="consent"
+                                required
+                                class="mt-1 w-4 h-4 text-aquiline-red border-gray-300 rounded focus:ring-aquiline-red"
+                            >
+                            <label for="consent" class="text-sm text-text-secondary">
+                                I agree to be contacted by Aquiline Technology regarding my inquiry and consent to the processing of my personal data in accordance with the Privacy Policy.
+                            </label>
+                        </div>
+
+                        <button 
+                            type="submit"
+                            class="w-full bg-aquiline-red text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2"
+                        >
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Map & Office Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Our Locations</h3>
+                        <p class="text-text-secondary mb-6">
+                            With offices across Nigeria, we're positioned to serve your security needs nationwide.
+                        </p>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300">
+                        <div class="text-center">
+                            <i class="fas fa-map-marked-alt text-4xl text-gray-400 mb-2"></i>
+                            <p class="text-gray-500">Interactive Map</p>
+                            <p class="text-sm text-gray-400">Lagos, Nigeria Office Location</p>
+                        </div>
+                    </div>
+
+                    <!-- Office Details -->
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                <i class="fas fa-building text-aquiline-red"></i>
+                                Lagos Head Office
+                            </h4>
+                            <div class="space-y-2 text-text-secondary">
+                                <p class="flex items-start gap-2">
+                                    <i class="fas fa-map-marker-alt text-aquiline-red mt-1"></i>
+                                    123 Victoria Island Drive, Lagos State, Nigeria
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <i class="fas fa-phone text-aquiline-red"></i>
+                                    +234 (0) 813 123 4567
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <i class="fas fa-envelope text-aquiline-red"></i>
+                                    lagos@aquilinetech.com
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <i class="fas fa-clock text-aquiline-red"></i>
+                                    Mon - Fri: 9:00 AM - 5:00 PM WAT
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg border border-gray-200">
+                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
+                                <i class="fas fa-building text-aquiline-red"></i>
+                                Abuja Branch Office
+                            </h4>
+                            <div class="space-y-2 text-text-secondary">
+                                <p class="flex items-start gap-2">
+                                    <i class="fas fa-map-marker-alt text-aquiline-red mt-1"></i>
+                                    456 Central Business District, Abuja, FCT
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <i class="fas fa-phone text-aquiline-red"></i>
+                                    +234 (0) 901 234 5678
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <i class="fas fa-envelope text-aquiline-red"></i>
+                                    abuja@aquilinetech.com
+                                </p>
+                                <p class="flex items-center gap-2">
+                                    <i class="fas fa-clock text-aquiline-red"></i>
+                                    Mon - Fri: 9:00 AM - 5:00 PM WAT
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-5">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 text-gray-800">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-text-secondary">
+                    Quick answers to common questions about our security solutions and services.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg">
+                    <button 
+                        class="w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 transition-colors flex justify-between items-center"
+                        onclick="toggleFAQ(0)"
+                    >
+                        How quickly can you deploy security solutions?
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-0"></i>
+                    </button>
+                    <div class="px-6 pb-4 text-text-secondary hidden" id="faq-content-0">
+                        Deployment timelines vary based on solution complexity. Simple tracking solutions can be deployed within 24-48 hours, while comprehensive security systems typically take 1-2 weeks for full implementation.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button 
+                        class="w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 transition-colors flex justify-between items-center"
+                        onclick="toggleFAQ(1)"
+                    >
+                        Do you provide 24/7 technical support?
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-1"></i>
+                    </button>
+                    <div class="px-6 pb-4 text-text-secondary hidden" id="faq-content-1">
+                        Yes, we offer 24/7 technical support for all our enterprise clients. Our support team is available via phone, email, and our dedicated support portal to ensure your security systems operate smoothly.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button 
+                        class="w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 transition-colors flex justify-between items-center"
+                        onclick="toggleFAQ(2)"
+                    >
+                        Can your solutions integrate with existing security systems?
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-2"></i>
+                    </button>
+                    <div class="px-6 pb-4 text-text-secondary hidden" id="faq-content-2">
+                        Absolutely. Our solutions are designed with integration in mind. We can connect with most existing security infrastructures, CCTV systems, access controls, and third-party applications through APIs and standard protocols.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button 
+                        class="w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 transition-colors flex justify-between items-center"
+                        onclick="toggleFAQ(3)"
+                    >
+                        What industries do you primarily serve?
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-3"></i>
+                    </button>
+                    <div class="px-6 pb-4 text-text-secondary hidden" id="faq-content-3">
+                        We serve diverse industries including banking & finance, oil & gas, telecommunications, government agencies, NGOs, manufacturing, and logistics. Our solutions are scalable and adaptable to various sector requirements.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg">
+                    <button 
+                        class="w-full px-6 py-4 text-left font-medium text-gray-800 hover:bg-gray-50 transition-colors flex justify-between items-center"
+                        onclick="toggleFAQ(4)"
+                    >
+                        Do you offer training for our security personnel?
+                        <i class="fas fa-chevron-down transition-transform duration-300" id="faq-icon-4"></i>
+                    </button>
+                    <div class="px-6 pb-4 text-text-secondary hidden" id="faq-content-4">
+                        Yes, we provide comprehensive training programs for your security teams. This includes system operation training, best practices workshops, and ongoing support to ensure maximum effectiveness of our solutions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-[#111827] text-white">
+        <div class="max-w-4xl mx-auto px-5 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold leading-tight font-georgia mb-6">
+                Ready to Enhance Your Security?
+            </h2>
+            <p class="text-xl opacity-90 mb-8">
+                Let's discuss how our proven security solutions can protect your organization.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-aquiline-red text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-red-600 hover:-translate-y-1 hover:shadow-lg flex items-center justify-center gap-2">
+                    Schedule Free Consultation <i class="fas fa-calendar"></i>
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition-all hover:bg-white hover:text-gray-800 hover:-translate-y-1 flex items-center justify-center gap-2">
+                    Download Brochure <i class="fas fa-download"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F2937] text-white py-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-4">
+                    <img src="/public/images/dark_logo.png" alt="Aquiline Technology" class="w-[160px] h-[32px]">
+                    <p class="opacity-50 leading-relaxed">Smart security solution: Trusted proven and Scalable</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 opacity-80">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Features</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Pricing</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Demo</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 opacity-80">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">About</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Careers</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Contact</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 opacity-80">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Help Center</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Documentation</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Privacy Policy</a></li>
+                        <li><a href="#" class="opacity-50 hover:opacity-80 transition-opacity">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-10 pt-8 text-center opacity-60">
+                <p>&copy; 2025 Aquiline Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

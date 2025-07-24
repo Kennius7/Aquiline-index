@@ -127,3 +127,27 @@ canvas {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
+
+
+
+
+
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-menu.open {
+    max-height: 250px;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+

@@ -26,57 +26,9 @@
             }
         }
     </script>
-    <script>
-        let isDropdownOpen = false;
-
-        function toggleDropdown(event) {
-            // event.preventDefault();
-            const dropdown = document.getElementById('dropdown');
-            const chevron = document.getElementById('chevron');
-
-            if (isDropdownOpen) {
-                // Close dropdown
-                dropdown.classList.remove('open');
-                dropdown.style.opacity = '0';
-                chevron.style.transform = 'rotate(0deg)';
-                isDropdownOpen = false;
-            } else {
-                // Open dropdown
-                dropdown.classList.add('open');
-                dropdown.style.opacity = '1';
-                chevron.style.transform = 'rotate(180deg)';
-                isDropdownOpen = true;
-            }
-        }
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(event) {
-            const dropdown = document.getElementById('dropdown');
-            const productsLink = event.target.closest('[onclick="toggleDropdown(event)"]');
-            
-            if (!productsLink && !dropdown.contains(event.target) && isDropdownOpen) {
-                dropdown.classList.remove('open');
-                dropdown.style.opacity = '0';
-                document.getElementById('chevron').style.transform = 'rotate(0deg)';
-                isDropdownOpen = false;
-            }
-        });
-    </script>
-    <style>
-        .dropdown-menu {
-            max-height: 0;
-            overflow: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .dropdown-menu.open {
-            max-height: 200px;
-            transform: translateY(0);
-        }
-    </style>
     <link rel="stylesheet" href="custom.css">
 </head>
+
 <body class="font-roboto font-normal text-text-primary bg-white">
     <!-- Header -->
     <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
@@ -94,17 +46,20 @@
                         <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">
                             Product <i id="chevron" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
                         </a>
-                        <div id="dropdown"
-                            class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white border border-gray-200 
-                            rounded-md shadow-lg opacity-0 transition-all duration-200 z-10"
+                        <div 
+                            id="dropdown"
+                            class="dropdown-menu absolute top-12 left-0 w-[220px] bg-white 
+                            border border-gray-200 rounded-md shadow-lg opacity-0 transition-all 
+                            duration-200 z-10"
                         >
-                            <ul class="py-2">
+                            <ul class="">
                                 <li>
                                     <a 
-                                        href="sentry_one.html" 
+                                        href="sentinel_one.html" 
                                         class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
                                         hover:bg-gray-50 transition-colors"
                                     >
+                                        <i class="fas fa-shield-alt mr-3 text-gray-400"></i>
                                         Sentinel One
                                     </a>
                                 </li>
@@ -114,6 +69,7 @@
                                         class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
                                         hover:bg-gray-50 transition-colors"
                                     >
+                                        <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
                                         Traxovia
                                     </a>
                                 </li>
@@ -123,7 +79,8 @@
                                         class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
                                         hover:bg-gray-50 transition-colors"
                                     >
-                                        Sentinel Stride
+                                        <i class="fas fa-walking mr-3 text-gray-400"></i>
+                                        Sentry Stride
                                     </a>
                                 </li>
                                 <li>
@@ -132,33 +89,133 @@
                                         class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
                                         hover:bg-gray-50 transition-colors"
                                     >
+                                        <i class="fas fa-brain mr-3 text-gray-400"></i>
                                         Aquiline Intelligence
+                                    </a>
+                                </li>
+                                <li>
+                                    <a 
+                                        href="index.html" 
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
+                                    >
+                                        <i class="fas fas fa-home mr-3 text-gray-400"></i>
+                                        Home
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Company</a>
+                        <a 
+                            href="about_us.html" 
+                            class="text-text-primary font-medium hover:text-aquiline-red transition-colors"
+                        >About Us</a>
                     </li>
                     <li>
-                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors">Contact us</a>
+                        <a 
+                            href="contact_us.html" 
+                            class="text-text-primary font-medium hover:text-aquiline-red transition-colors"
+                        >Contact us</a>
                     </li>
                 </ul>
                 <button 
                     class="bg-gray-800 text-white border-none md:py-2 md:px-6 py-1 px-4 rounded-lg font-medium 
-                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 flex 
+                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 md:flex hidden
                     items-center gap-2 md:text-[16px] text-[12px]"
                 >
                     Book demo <i class="fas fa-arrow-right"></i>
                 </button>
-                <div class="md:hidden flex flex-col cursor-pointer">
-                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
-                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
-                    <span class="w-6 h-0.5 bg-gray-800 my-0.5 transition-all"></span>
+
+                <div class="md:hidden relative">
+                    <a 
+                        href="#" 
+                        class="text-text-primary font-medium hover:text-aquiline-red transition-colors 
+                        flex items-center gap-1"
+                        onclick="toggleDropdownMobile(event)"
+                    >
+                        <i id="chevron" class="fas fa-bars text-[16px] transition-transform duration-300"></i>
+                    </a>
+
+                    <!-- Backdrop overlay -->
+                    <div 
+                        id="dropdownBackdrop"
+                        class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 invisible transition-all 
+                        duration-300"
+                        onclick="closeDropdownMobile()"
+                    ></div>
+
+                    <!-- Dropdown Menu -->
+                    <ul 
+                        id="dropdownMobile"
+                        class="fixed top-0 right-0 h-full w-80 bg-white border-l border-gray-200 
+                            shadow-2xl transform translate-x-full transition-all duration-500 ease-in-out z-50"
+                    >
+                        <!-- Close button -->
+                        <li class="border-b border-gray-200 p-4">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-text-primary">Aquiline</h3>
+                                <button 
+                                    onclick="closeDropdownMobile()"
+                                    class="text-gray-500 hover:text-gray-700 transition-colors p-1"
+                                >
+                                    <i class="fas fa-times text-xl"></i>
+                                </button>
+                            </div>
+                        </li>
+                        
+                        <!-- Menu items -->
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a 
+                                href="sentinel_one.html" 
+                                class="block px-6 py-4 text-text-primary hover:text-aquiline-red 
+                                transition-colors"
+                            >
+                                <i class="fas fa-shield-alt mr-3 text-gray-400"></i>
+                                Sentinel One
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a 
+                                href="traxovia.html" 
+                                class="block px-6 py-4 text-text-primary hover:text-aquiline-red 
+                                transition-colors"
+                            >
+                                <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
+                                Traxovia
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="sentry_stride.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-walking mr-3 text-gray-400"></i>
+                                Sentry Stride
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="aquiline_intelligence.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                Aquiline Intelligence
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="index.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="about_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                            <a href="contact_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
