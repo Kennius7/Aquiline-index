@@ -30,26 +30,19 @@
 </head>
 <body class="font-roboto text-text-primary bg-white">
     <!-- Header -->
-    <header 
-        class="bg-transparent fixed top-0 left-0 right-0 z-50 backdrop-blur bg-white/30 border-b border-white/20" 
-        
-    >
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
         <nav class="py-4">
             <div class="max-w-6xl mx-auto px-5 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <img 
-                        src="/public/images/dark_logo.png" 
+                        src="/public/images/logo.png" 
                         alt="Aquiline Technology" 
-                        class="w-[160px] h-[32px] rounded-lg"
+                        class="md:w-[180px] md:h-[36px] w-[120px] h-[24px]"
                     >
                 </div>
                 <ul class="hidden md:flex list-none gap-8 m-0 relative">
                     <li onclick="toggleDropdown(event)" class="">
-                        <a 
-                            href="#" 
-                            class="text-gray-100 font-medium hover:text-aquiline-red 
-                            transition-colors flex items-center gap-1"
-                        >
+                        <a href="#" class="text-text-primary font-medium hover:text-aquiline-red transition-colors flex items-center gap-1">
                             Product <i id="chevron" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
                         </a>
                         <div 
@@ -58,65 +51,45 @@
                             border border-gray-200 rounded-md shadow-lg opacity-0 transition-all 
                             duration-200 z-10"
                         >
-                            <ul class="flex items-start flex-col">
-                                <li class="w-full">
+                            <ul class="">
+                                <li>
                                     <a 
                                         href="sentinel_one.html" 
-                                        class="flex justify-start items-center px-4 py-2 text-text-primary 
-                                        hover:text-aquiline-red hover:bg-gray-50 transition-colors text-left"
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
                                     >
-                                        <div class="flex justify-center items-center w-8 h-8">
-                                            <i class="fas fa-shield-alt mr-3 text-gray-400 text-sm"></i>
-                                        </div>
+                                        <i class="fas fa-shield-alt mr-3 text-gray-400"></i>
                                         Sentinel One
                                     </a>
                                 </li>
-                                <li class="w-full">
+                                <li>
                                     <a 
                                         href="traxovia.html" 
-                                        class="flex justify-start items-center px-4 py-2 text-text-primary 
-                                        hover:text-aquiline-red hover:bg-gray-50 transition-colors text-left"
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
                                     >
-                                        <div class="flex justify-center items-center w-8 h-8">
-                                            <i class="fas fa-map-marked-alt mr-3 text-gray-400 text-sm"></i>
-                                        </div>
+                                        <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
                                         Traxovia
                                     </a>
                                 </li>
-                                <li class="w-full">
+                                <li>
                                     <a 
                                         href="sentry_stride.html" 
-                                        class="flex justify-start items-center px-4 py-2 text-text-primary 
-                                        hover:text-aquiline-red hover:bg-gray-50 transition-colors text-left"
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
                                     >
-                                        <div class="flex justify-center items-center w-8 h-8">
-                                            <i class="fas fa-walking mr-3 text-gray-400 text-sm"></i>
-                                        </div>
+                                        <i class="fas fa-walking mr-3 text-gray-400"></i>
                                         Sentry Stride
                                     </a>
                                 </li>
-                                <li class="w-full">
+                                <li>
                                     <a 
                                         href="aquiline_intelligence.html" 
-                                        class="flex justify-start items-center px-4 py-2 text-text-primary 
-                                        hover:text-aquiline-red hover:bg-gray-50 transition-colors text-left"
+                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
+                                        hover:bg-gray-50 transition-colors"
                                     >
-                                        <div class="flex justify-center items-center w-8 h-8">
-                                            <i class="fas fa-brain mr-3 text-gray-400 text-sm"></i>
-                                        </div>
+                                        <i class="fas fa-brain mr-3 text-gray-400"></i>
                                         Aquiline Intelligence
-                                    </a>
-                                </li>
-                                <li class="w-full">
-                                    <a 
-                                        href="index.html" 
-                                        class="flex justify-start items-center px-4 py-2 text-text-primary 
-                                        hover:text-aquiline-red hover:bg-gray-50 transition-colors text-left"
-                                    >
-                                        <div class="flex justify-center items-center w-8 h-8">
-                                            <i class="fas fas fa-home mr-3 text-gray-400 text-sm"></i>
-                                        </div>
-                                        Home
                                     </a>
                                 </li>
                             </ul>
@@ -125,26 +98,28 @@
                     <li>
                         <a 
                             href="about_us.html" 
-                            class="text-gray-100 font-medium hover:text-aquiline-red transition-colors"
+                            class="text-text-primary font-medium hover:text-aquiline-red transition-colors"
                         >About Us</a>
                     </li>
                     <li>
                         <a 
                             href="contact_us.html" 
-                            class="text-gray-100 font-medium hover:text-aquiline-red transition-colors"
+                            class="text-text-primary font-medium hover:text-aquiline-red transition-colors"
                         >Contact us</a>
                     </li>
                 </ul>
                 <button 
-                    class="bg-gray-50 text-gray-700 border-none py-2 px-5 rounded-lg font-medium 
-                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 
-                    md:flex hidden items-center gap-2 ">
+                    class="bg-gray-800 text-white border-none md:py-2 md:px-6 py-1 px-4 rounded-lg font-medium 
+                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 md:flex hidden
+                    items-center gap-2 md:text-[16px] text-[12px]"
+                >
                     Book demo <i class="fas fa-arrow-right"></i>
                 </button>
+
                 <div class="md:hidden relative">
                     <a 
                         href="#" 
-                        class="text-gray-100 font-medium hover:text-aquiline-red transition-colors 
+                        class="text-text-primary font-medium hover:text-aquiline-red transition-colors 
                         flex items-center gap-1"
                         onclick="toggleDropdownMobile(event)"
                     >
@@ -190,7 +165,11 @@
                             </a>
                         </li>
                         <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                            <a href="traxovia.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                            <a 
+                                href="traxovia.html" 
+                                class="block px-6 py-4 text-text-primary hover:text-aquiline-red 
+                                transition-colors"
+                            >
                                 <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
                                 Traxovia
                             </a>
@@ -207,20 +186,15 @@
                                 Aquiline Intelligence
                             </a>
                         </li>
-                            <a href="index.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
-                                <i class="fas fa-brain mr-3 text-gray-400"></i>
-                                Home
-                            </a>
-                        </li>
-                            <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <a href="about_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
-                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                <i class="fas fa-question-circle mr-3 text-gray-400"></i>
                                 About Us
                             </a>
                         </li>
                         <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <a href="contact_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
-                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                <i class="fas fa-phone-alt mr-3 text-gray-400"></i>
                                 Contact Us
                             </a>
                         </li>
@@ -706,14 +680,14 @@
                     <img src="/public/images/dark_logo.png" alt="Aquiline Technology" class="w-[160px] h-[32px]">
                     <p class="opacity-50 leading-relaxed">Smart security solution: Trusted proven and Scalable</p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                        <a href="https://x.com/aquilinetech" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="https://www.instagram.com/aquilinetech/" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
-                            <i class="fab fa-facebook"></i>
+                        <a href="https://www.linkedin.com/company/aquiline-technology/" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
                 </div>

@@ -33,12 +33,8 @@
     <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
         <nav class="py-4">
             <div class="max-w-6xl mx-auto px-5 flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <img 
-                        src="/public/images/Traxovia_logo.png" 
-                        alt="Traxovia Logo" 
-                        class="md:w-[150px] md:h-[30px] w-[100px] h-[20px]"
-                    >
+                <div class="flex items-center gap-3 md:text-3xl text-lg text-aquiline-red font-georgia italic ">
+                    Traxovia
                 </div>
                 <ul class="hidden md:flex list-none gap-8 m-0 relative">
                     <li onclick="toggleDropdown(event)" class="">
@@ -92,16 +88,6 @@
                                         Aquiline Intelligence
                                     </a>
                                 </li>
-                                <li>
-                                    <a 
-                                        href="index.html" 
-                                        class="block px-4 py-2 text-text-primary hover:text-aquiline-red 
-                                        hover:bg-gray-50 transition-colors"
-                                    >
-                                        <i class="fas fas fa-home mr-3 text-gray-400"></i>
-                                        Home
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </li>
@@ -119,11 +105,13 @@
                     </li>
                 </ul>
                 <button 
-                    class="bg-gray-800 text-white border-none py-2 px-5 rounded-lg font-medium 
-                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 
-                    md:flex hidden items-center gap-2 ">
+                    class="bg-gray-800 text-white border-none md:py-2 md:px-6 py-1 px-4 rounded-lg font-medium 
+                    cursor-pointer transition-all hover:bg-gray-700 hover:-translate-y-0.5 md:flex hidden
+                    items-center gap-2 md:text-[16px] text-[12px]"
+                >
                     Book demo <i class="fas fa-arrow-right"></i>
                 </button>
+
                 <div class="md:hidden relative">
                     <a 
                         href="#" 
@@ -173,7 +161,11 @@
                             </a>
                         </li>
                         <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
-                            <a href="traxovia.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
+                            <a 
+                                href="traxovia.html" 
+                                class="block px-6 py-4 text-text-primary hover:text-aquiline-red 
+                                transition-colors"
+                            >
                                 <i class="fas fa-map-marked-alt mr-3 text-gray-400"></i>
                                 Traxovia
                             </a>
@@ -190,20 +182,15 @@
                                 Aquiline Intelligence
                             </a>
                         </li>
-                            <a href="index.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
-                                <i class="fas fa-brain mr-3 text-gray-400"></i>
-                                Home
-                            </a>
-                        </li>
-                            <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <a href="about_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
-                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                <i class="fas fa-question-circle mr-3 text-gray-400"></i>
                                 About Us
                             </a>
                         </li>
                         <li class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
                             <a href="contact_us.html" class="block px-6 py-4 text-text-primary hover:text-aquiline-red transition-colors">
-                                <i class="fas fa-brain mr-3 text-gray-400"></i>
+                                <i class="fas fa-phone-alt mr-3 text-gray-400"></i>
                                 Contact Us
                             </a>
                         </li>
@@ -226,13 +213,14 @@
             </p>
             <div class="flex flex-row gap-4 justify-center items-center">
                 <button class="bg-aquiline-red text-white md:px-8 md:py-3 px-4 py-2 rounded-lg 
-                    hover:bg-red-600 transition-colors">
-                    Book a Demo
-                </button>
-                <button class="text-brand-dark border border-gray-300 md:px-8 md:py-3 px-4 py-2 rounded-lg 
-                    hover:bg-gray-100 transition-colors"
+                    hover:bg-red-600 transition-colors flex items-center"
                 >
-                    Start a free Trial
+                    Book a Demo <i class="fas fa-arrow-right md:ml-2 ml-1"></i>
+                </button>
+                <button class="text-gray-500 border border-gray-300 md:px-8 md:py-3 px-4 py-2 rounded-lg 
+                    hover:bg-gray-100 transition-colors flex items-center"
+                >
+                    Start a free Trial <i class="fas fa-arrow-right md:ml-2 ml-1"></i>
                 </button>
             </div>
         </div>
@@ -243,7 +231,7 @@
         <div class="max-w-5xl mx-auto md:px-6 px-4">
             <div class="bg-white md:rounded-t-3xl rounded-t-xl overflow-hidden">
                 <img 
-                    src="/public/images/traxovia_dashboard.png" 
+                    src="/public/images/Dashboard_Preview.png" 
                     alt="dashboard" 
                     class="w-full h-full object-cover"
                 >
@@ -305,7 +293,7 @@
                                 class="w-full h-full object-cover"
                             >
                         </div>
-                        <div class="md:px-8 px-5 md:py-0 py-2">
+                        <div class="md:px-8 px-5 md:py-0 py-6">
                             <h3 class="text-lg font-semibold mb-1">Geofencing That Drives Precision</h3>
                             <p class="text-gray-600 mb-1">
                                 Monitor drivers, vehicles and assets within defined zones.
@@ -333,7 +321,7 @@
                         </div>
                         <div class="flex items-center gap-3 overflow-hidden md:mb-0 mb-5">
                             <img 
-                                src="/public/images/tracking1.png" 
+                                src="/public/images/Frame_1000008159.png" 
                                 alt="Map VIew Pic" 
                                 class="w-full h-full object-cover"
                             >
@@ -345,12 +333,12 @@
                         w-fit h-[400px] md:rounded-[35px] rounded-2xl overflow-hidden md:p-6 p-0 relative">
                         <div class="flex items-center rounded-lg overflow-hidden shadow-lg md:m-0 m-3">
                             <img 
-                                src="/public/images/trip1.png" 
+                                src="/public/images/Frame_1618875001.png" 
                                 alt="Map VIew Pic" 
                                 class="w-full h-full object-cover"
                             >
                         </div>
-                        <div class="flex flex-col items-start md:p-0 p-5">
+                        <div class="flex flex-col items-start md:p-0 p-5 md:mt-8 mt-4">
                             <h3 class="text-lg font-semibold mb-1">Real-Time Trip Timeline Tracking</h3>
                             <p class="text-gray-600 mb-1 text-sm">
                                 Stay in control of every trip with a live, step-by-step visual 
@@ -364,12 +352,12 @@
                         w-fit h-[400px] md:rounded-[35px] rounded-2xl overflow-hidden md:p-6 p-0 relative">
                         <div class="flex items-center rounded-lg overflow-hidden shadow-lg md:m-0 m-3">
                             <img 
-                                src="/public/images/geofence_alert1.png" 
+                                src="/public/images/Frame_1618875147.png" 
                                 alt="Map VIew Pic" 
                                 class="w-full h-full object-cover"
                             >
                         </div>
-                        <div class="flex flex-col items-start md:p-0 p-5">
+                        <div class="flex flex-col items-start md:p-0 p-5 md:mt-16 mt-4">
                             <h3 class="text-lg font-semibold mb-1">Geofence Alerts for Smarter Control</h3>
                             <p class="text-gray-600 mb-1 text-sm">
                                 Get real-time alerts when people or assets enter or exit designated 
@@ -402,7 +390,7 @@
                     <div class="md:hidden block bg-white rounded-2xl overflow-hidden w-fit h-[320px] mb-8">
                         <div class="flex items-center rounded-md overflow-hidden">
                             <img 
-                                src="/public/images/human_centered1.png" 
+                                src="/public/images/Frame_1618873748.png" 
                                 alt="Human Centered Experience Pic" 
                                 class="w-full h-full object-cover"
                             >
@@ -472,7 +460,7 @@
                 <div class="md:block hidden bg-white rounded-2xl overflow-hidden w-[540px] h-[600px]">
                     <div class="flex items-center rounded-md overflow-hidden">
                         <img 
-                            src="/public/images/human_centered1.png" 
+                            src="/public/images/Frame_1618873748.png" 
                             alt="Human Centered Experience Pic" 
                             class="w-full h-full object-cover"
                         >
@@ -483,14 +471,14 @@
     </section>
 
     <!-- Fleet Control In Your Pocket -->
-    <section class="md:py-20 py-24 bg-white">
+    <section class="md:py-20 py-16 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 grid-cols-1 md:gap-12 gap-8 items-start">
 
                 <div class="md:block hidden overflow-hidden w-[540px] h-[600px] mt-10">
                     <div class="flex items-center rounded-md overflow-hidden">
                         <img 
-                            src="/public/images/mobile1.png" 
+                            src="/public/images/Frame_1618875157(2).png" 
                             alt="Mobile Experience Pic" 
                             class="w-full h-full object-cover"
                         >
@@ -510,7 +498,7 @@
                     <div class="md:hidden block overflow-hidden w-fit h-[350px] mt-10">
                         <div class="flex items-center rounded-md overflow-hidden">
                             <img 
-                                src="/public/images/mobile1.png" 
+                                src="/public/images/Frame_1618875157(2).png" 
                                 alt="Mobile Experience Pic" 
                                 class="w-full h-full object-cover"
                             >
@@ -564,7 +552,7 @@
                             md:flex hidden items-center gap-2">
                             Start Free Trial
                         </button>
-                        <div class="md:hidden flex justify-center items-center pt-14">
+                        <div class="md:hidden flex justify-center items-center md:pt-14 pt-8">
                             <button 
                                 class="bg-aquiline-red text-white border-none py-3 px-6 rounded-lg font-medium 
                                 cursor-pointer transition-all hover:bg-red-500 hover:-translate-y-0.5 
@@ -579,64 +567,125 @@
     </section>
 
 
-
-    <!-- Testimonials -->
     <section class="py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto md:px-5 px-4">
-            <h2 class="md:text-4xl text-[26px] font-bold text-center md:mb-12 mb-6 text-gray-800">
-                What Our Customers Say
-            </h2>
-            <p class="md:hidden block text-text-secondary leading-relaxed mb-12 text-center">
-                Unfiltered feedback from people who matter most.
-            </p>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-                    <div class="flex items-center gap-4 mb-6">
-                        <span class="text-lg font-bold text-gray-800">5.0</span>
-                        <div class="flex gap-1 text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-text-secondary leading-relaxed mb-6">
-                        "Traxovia has transformed our fleet management. We can track every vehicle, set geofences, and get instant alerts. The dashboard is easy to use and works even in remote areas."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-                        <div class="flex-1">
-                            <h4 class="font-bold text-gray-800">Amina Yusuf</h4>
-                            <p class="text-text-light text-sm">Fleet Manager, TransAfrica Logistics</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-                    <div class="flex items-center gap-4 mb-6">
-                        <span class="text-lg font-bold text-gray-800">4.9</span>
-                        <div class="flex gap-1 text-yellow-400">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                    <p class="text-text-secondary leading-relaxed mb-6">
-                        "The geofencing and offline sync features are game-changers for our rural operations. Traxovia is reliable, secure, and the support team is fantastic."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-                        <div class="flex-1">
-                            <h4 class="font-bold text-gray-800">Samuel Eze</h4>
-                            <p class="text-text-light text-sm">Operations Lead, GreenField Farms</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center md:mb-16 mb-4">
+                <h2 class="md:text-4xl text-2xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
             </div>
+
+            <p class="md:hidden block text-sm text-center text-gray-500 md:mb-0 mb-12">
+                Unfiltered feedback from our clients
+            </p>
+
+            <!-- Slider Container -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div id="slider" class="relative overflow-hidden rounded-lg">
+                    <!-- Slider Track -->
+                    <div id="sliderTrack" class="flex transition-transform duration-300 ease-in-out">
+                        <!-- Testimonial 1 -->
+                        <div class="md:w-1/2 w-full flex-shrink-0 md:px-2 px-0">
+                            <div class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <span class="text-lg font-bold text-gray-800">5.0</span>
+                                    <div class="flex gap-1 text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-text-secondary leading-relaxed mb-6">
+                                    “Tracking patrol officers used to be a nightmare — until we started using the 
+                                    mobile version of Traxovia. The geofence alerts, live location tracking, and 
+                                    instant incident reporting have made my job so much easier. I get notified the 
+                                    moment someone leaves their assigned zone."
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                                        <img 
+                                            src="/public/images/Lady_Bust1.png" 
+                                            alt="Abidemi Tosin pics" 
+                                            class="w-full h-full object-cover"
+                                        >
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-gray-800">Amina Yusuf</h4>
+                                        <p class="text-text-light text-sm">Fleet Manager, TransAfrica Logistics</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="md:w-1/2 w-full flex-shrink-0 md:px-2 px-0">
+                            <div class="bg-white md:p-8 p-5 rounded-xl shadow-sm border border-gray-200">
+                                <div class="flex items-center gap-4 mb-6">
+                                    <span class="text-lg font-bold text-gray-800">4.9</span>
+                                    <div class="flex gap-1 text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <p class="text-text-secondary leading-relaxed mb-6">
+                                    “We manage dozens of field agents across rural areas, and this is the first 
+                                    system that’s worked for us without fancy hardware. Even when offline, staff 
+                                    movement is recorded and synced later. It's improved our accountability, safety, 
+                                    and donor reporting.”
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
+                                        <img 
+                                            src="/public/images/Guy_Bust1.png" 
+                                            alt="Abidemi Tosin pics" 
+                                            class="w-full h-full object-cover"
+                                        >
+                                    </div>
+                                    <div class="flex-1">
+                                        <h4 class="font-bold text-gray-800">Samuel Eze</h4>
+                                        <p class="text-text-light text-sm">Operations Lead, GreenField Farms</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button 
+                        id="prevBtn" 
+                        class="hidden absolute left-0 top-1/2 transform -translate-y-1/2 bg-white 
+                        bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all 
+                        duration-200 hover:scale-110 z-10 border border-gray-200"
+                    >
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button 
+                        id="nextBtn" 
+                        class="hidden absolute right-0 top-1/2 transform -translate-y-1/2 bg-white 
+                        bg-opacity-80 hover:bg-opacity-100 rounded-full p-2 shadow-lg transition-all 
+                        duration-200 hover:scale-110 z-10 border border-gray-200"
+                    >
+                        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Pagination Dots (Mobile only) -->
+                <div id="pagination" class="flex md:hidden justify-center mt-6 space-x-2"></div>
+            </div>
+
+
         </div>
     </section>
+
+
+
 
     <!-- CTA Footer -->
     <section class="py-20 bg-white">
@@ -673,24 +722,19 @@
         <div class="max-w-6xl mx-auto px-5">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div class="space-y-4">
-                    <img 
-                        src="/public/images/Traxovia_logo.png" 
-                        alt="Traxovia Logo" 
-                        class="w-[160px] h-[32px]"
-                    >
+                    <div class="flex items-center gap-3 md:text-2xl text-lg text-aquiline-red font-georgia italic ">
+                        Traxovia
+                    </div>
                     <p class="opacity-50 leading-relaxed">Modern Fleet Management without the hardware cost</p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                        <a href="https://x.com/aquilinetech" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                        <a href="https://www.instagram.com/aquilinetech/" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
                             <i class="fab fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/aquiline-technology/" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-aquiline-red transition-colors">
+                            <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
                 </div>
